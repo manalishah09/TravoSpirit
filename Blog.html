@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TravoSpirit | Blogs</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="shortcut icon" type="image/png" href="logo.png"">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/html" href="only_navbar.html">
+    <style>
+
+    .hr_style{ 
+        border: 0; 
+        height: 1px; 
+        background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+        background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+        background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+        background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+        width:100%; 
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .navs{
+        text-align: center;
+        padding-bottom:25px;
+        font-size: 20px; 
+    }
+
+    * { 
+        box-sizing: border-box;
+    }
+
+    body {
+        background-image: url(https://images.unsplash.com/photo-1519515177735-858fff779cfd?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ea1daf5b8a44e9287afc86ec275ffe81&auto=format&fit=crop&w=750&q=80);
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat; 
+    }
+
+    #title{
+        color: #FCE06E;
+        font-family: 'Montserrat', cursive;
+        font-weight: 600;
+        font-size: 5em;
+    }
+
+    h2{
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .header {
+        text-align: center;
+        background: (0,0,0);
+        margin-bottom: 70px;
+        margin-top: 50px;
+    }
+
+    .card{
+        padding: 20px;
+        border-radius: 5px;
+        margin-bottom: 15px;
+            box-shadow:  0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.30);
+    }
+
+    /* Create two unequal columns that floats next to each other */
+    .leftcolumn {   
+        float: left;
+        width: 50%;
+    }
+
+    .rightcolumn {
+        float: left;
+        width: 50%;
+        padding-left: 20px;
+    }
+
+    .fakeimg {
+        background-color:#C7F50B;
+        width: 100%;
+        height:100%;
+        box-shadow:  0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.30);
+    }
+
+    /* Add a card effect for articles */
+    .card {
+        background-color: white;
+        margin-top: 20px;
+    }
+
+    .content{
+        padding: 15px;
+        color: #f64f59;
+    }
+    /* Clear floats after the columns */
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    .lowercolumn{
+        padding: 20px;
+    }
+    .fimg{
+        width: 100px;
+        height: 100px;
+    }
+
+    a{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        color:#ffffff;
+        text-decoration: none !important;
+        padding-left: 40px;
+    }
+
+    .nav1{
+       font-family: 'Montserrat', sans-serif;
+       font-size: 16px;
+       font-weight: 400;
+       color:#ffffff;
+       text-decoration: none;
+       padding-left: 40px;
+   }
+   a:hover{
+      color:#fe435b;
+  }
+  a:active{
+      color:#fe435b;
+      border-bottom: 5px;
+      border-color: #fe435b;
+  }
+  .dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color:#cfcfd1 ;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    color:#000000;
+}
+
+
+.dropdown-content a {
+    color: #ffffff;
+    padding: 12px 16px 10px;
+    text-decoration: none;
+    display: block;
+    font-family:'Montserrat', sans-serif; 
+}
+.dropdown:hover .dropdown-content {display: block;}
+
+.foot_ul{
+    list-style: none;
+    text-decoration: none;   
+    list-style-type: none;
+}
+.foot_ul a{
+    text-decoration: none;
+    color:black;
+}
+#foot_tbl   {
+    table-layout: fixed;
+    width:100%;
+}
+.tbl_col{
+    width: 25%;
+}
+#foot{
+    background-color: #131a2f;
+    color: #ffffff;
+}
+
+
+#foot_pre{
+    background: transparent;
+    border: none;
+    font-size: 15px;
+}
+.link{
+    color: #ffffff;
+}
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+</style>
+</head>
+<body style="margin: 0;">
+    <div id="top" style="margin: 0;">
+       <div class="navbar1" style=" position:relative; margin-top:40px; padding-left: 40px; padding-right: 60px;margin-right:40px; margin-left:40px; background-color: #131a2f; height:120px; z-index: 999;">
+
+          <div style="float:left;padding-top: 20px;">
+            <div style="float:left"><img src="logo.png"></div>
+            <div style="float:right;font-family: 'Montserrat', sans-serif; color:#ffffff;"><h2>TRAVOSPIRIT</h2></a>
+              <p style="margin-top: -15px; font-weight: 10px; color: #c9cfd8; padding-left: 10px;">Travel Agency</p></div>
+
+            </div>
+            <div style="padding-top: 50px;">
+              <div style="float:left;padding-left: 150px;">
+                <a  class="nav1" href="index_n.html">Home</a>
+                <a  class="nav1" href="AboutUs.html">About Us</a>
+                <a  class="nav1" href="Blog.html">Blogs</a>
+                <a  class="nav1" href="holidays.html">Holidays</a>
+                <a  class="nav1"  href="contact_us.html">Contact Us</a>
+                <a  class="nav1"  href="Emergency.html">Emergency Contacts</a>
+                 
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        
+                <br>
+                <br>
+
+
+    <div class="container">
+
+            <div class="header">
+                <h1 id="title" style="color: black; text-align:left ">Travel Blog</h1>
+            </div>
+
+            <div class="row">
+                <div class="leftcolumn">
+                    <div class="card">
+                        <img  class="fakeimg" src="https://static.wixstatic.com/media/2ec324c343e44b12a059cc495defa971.jpg/v1/fit/w_740,h_494,al_c,q_90/file.webp">
+                        <div class="content">
+                            <h2>Picture perfect campsites</h2>
+                            <h5>26 July, 2018</h5>
+                            <p>One of the most amazing and picturesque hiking destination in the world, Everest Base Camp Trek in Nepal, serves you with aesthetic views of nature drawn by Mother Earth. Trekkers travel on the same path where the great Edmund Hillary and Tenzing Norgay walked.
+                            </p>
+                            <br>
+                            <div>READ MORE</div>    
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img  class="fakeimg" src="https://images.unsplash.com/photo-1529733772151-bab41484710a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b1b59c849713a52b889c673e67ecf144&auto=format&fit=crop&w=500&q=60">
+                        <div class="content">
+                            <h2>Cost management as an element of financial management</h2>
+                            <h5>by Super User in Blog on 29 May, 2018</h5>
+                            <p>Modern business is often observed in a complex manner. Like any organism requires a lot of elements to function correctly, a company contains some departments that play vital roles in its successful functioning. Work of these departments may be connected with finances, and if it is, then cost management becomes important for flawless functioning of such departments.
+                            </p>
+                            <br>
+                            <div>READ MORE</div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img  class="fakeimg" src="https://betablog.veenaworld.com/wp-content/uploads/2018/10/feature-image-kerala.jpg">
+                        <div class="content">
+                            <h2>Back To Kerala – It’s Time To Rediscover The Magic Of God’s Own Country</h2>
+                            <h5>by Super User   in Blog on 29 May, 2018</h5>
+                            <p>Modern business is often observed in a complex manner. Like any organism requires a lot of elements to function correctly, a company contains some departments that play vital roles in its successful functioning. Work of these departments may be connected with finances, and if it is, then cost management becomes important for flawless functioning of such departments.
+                            </p>
+                            <br>
+                            <div>READ MORE</div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+                <div class="rightcolumn">
+                    <div class="card">
+                        <img  class="fakeimg" src="https://images.unsplash.com/photo-1515004207928-a22c7f92c249?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=97bb8ba4c9b823dc214d1fcebb2e0909&auto=format&fit=crop&w=500&q=60">
+                        <div class="content">
+                            <h2>Book now and get a discount</h2>
+                            <h5>by Super User   in Blog on 29 May, 2018</h5>
+                            <p>Only till the end of the week! Book a tour and receive a 50% discount for your next trip. All trips, cruises and safari tours count. The discount can be used any time. For example, you can apply it to your trip next year.
+                            </p>
+                            <br>
+                            <div>READ MORE</div>
+                        </div>                  
+                    </div>
+
+                    <div class="card">
+                        <img  class="fakeimg" src="https://images.unsplash.com/photo-1503248739195-65669aaf5b0f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=af247d22850fd5c118a3d61ab1041cd7&auto=format&fit=crop&w=500&q=60">
+                        <div class="content">
+                            <h2>How to choose right tourist equipment</h2>
+                            <h5>by Super User   in Blog on 29 May, 2018</h5>    
+                            <p>If travelling is your passion, then it’s essential to have the right kit for your journey. Choosing equipment is one of the most important stages of preparation when it comes to tourism and active rest.
+                            </p>
+                            <br>
+                            <div>READ MORE</div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img  class="fakeimg" src="https://images.unsplash.com/photo-1521427185932-e69b86608ff6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=0f2f69eb6a20413a91632f42ae9fd144&auto=format&fit=crop&w=500&q=60">
+                        <div class="content">
+                            <h2>How to choose right tourist equipment</h2>
+                            <h5>by Super User   in Blog on 29 May, 2018</h5>    
+                            <p>If travelling is your passion, then it’s essential to have the right kit for your journey. Choosing equipment is one of the most important stages of preparation when it comes to tourism and active rest.
+                            </p>
+                            <br>
+                            <div>READ MORE</div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+
+
+            <script src="http://code.jquery.com/jquery-2.1.4.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+
+                <script type="text/javascript">
+                    var modal = document.getElementById('myModal1');
+
+                    // Get the button that opens the modal
+                    var btn = document.getElementById("id01");
+
+                    // Get the <span> element that closes the modal
+                    var span = document.getElementsByClassName("close")[0];
+
+                    // When the user clicks the button, open the modal 
+                    btn.onclick = function() {
+                        modal.style.display = "block";
+                    }
+
+                    // When the user clicks on <span> (x), close the modal
+                    span.onclick = function() {
+                        modal.style.display = "none";
+                    }
+
+                    // When the user clicks anywhere outside of the modal, close it
+                    window.onclick = function(event) {
+                        if (event.target == modal) {
+                            modal.style.display = "none";
+                        }
+                    }
+                </script>
+
+
+
+ <footer id="foot"> 
+          <table id="foot_tbl">
+            <tr>
+              <td class="tbl_col">
+                <ul class="foot_ul">
+                  <li><h1 style="color: #ffb20c;">About Us</h1></li>
+                  <p>It all began in the year 1987, when two visionaries met, in a very humble way. Shri Jitendra N. Shah, from the traditional Gujrati Trading Community,<span><a style="color: #ffb20c; margin-left: -40px;" href="AboutUs.html">Read More</a></span></p>
+                </ul>
+              </td>
+              <td class="tbl_col" style="text-align: center;">
+                <br>
+                <form action="#">
+                  <h4 style="font-size: 120%; font-family: Raleway;">GUEST SPEAKS:</h4>
+                  <p><i>"Travelling to Darjeeling through Travospirit was a great pleasure. <br>Came back with cherishable memories. A Big Thank you for <br>all your guidance."</i></p>
+                  <i style="font-size: 130%; color: #c1bcb2;">Please help us serve you better:</i>
+                  <br>
+
+                  <br>
+                  <button type="button" style="background-color: #ffb20c; border: none; height: 30px; width: 100px;" onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSdhJdC3QSnQXcGqNVUphUSBgOCqUddKaMcoryJEI6m7BkW8nw/viewform'" ><b>Feedback</b></button>
+                </form>
+                <br>
+              </td>
+
+              <td class="tbl_col">
+                <h1 style="color: #ffb20c;">Contact Us</h1>
+                <p>No 303-305, 3rd Floor, M L Space,
+                  D J Road,<br>Station Road,
+                Vile Parle West, Mumbai – 400056.</p>
+                <br>
+                <ul class="foot_ul" style="margin-right: 150px;">
+                  <li><i class="fab fa-facebook-f"></i>  <a style="color: #ffffff" href='#'>Facebook</a></li>
+                  <br>
+                  <li><i class="fab fa-instagram"></i>  <a style="color: #ffffff;"  href='#'>Instagram</a></li>
+                  <br>
+                  <li><i class="fab fa-twitter"></i>  <a style="color: #ffffff;" href='#'>Twitter</a></li>
+                </ul>
+              </td>
+            </tr>
+          </table>
+        </footer>
+</body>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>TravoSpirit | Emergency Contacts</title>
+
+	<!-- Google Fonts -->
+	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700|Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
+	<link rel="shortcut icon" type="image/png" href="logo.png"">
+
+
+	<!--<link rel="stylesheet" href="animate.css">
+	Custom Stylesheet -->
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+
+
+<body>
+	<div class="container">
+		<div class="top">
+		</div>
+		<h2 style="padding-left: 20px;color: #665851; text-align: center; padding-top: 30px; font-weight: 700;">During the journey, in case of any emergency</h2>
+		<div class="login-box animated fadeInUp" style="margin-top: -7
+		0px;">
+			<div class="box-header">
+				<h2>Emergency Contacts</h2>
+			</div>
+			
+			<form method="GET" action="">
+				
+				<label for="username" >Place</label>
+				<br/>
+				<input type="text" name="name" id="username">
+				<br/>
+
+				<button type="submit" name="submit" onclick="showContact();return false;"> Submit </button><br>
+				<br>
+			
+				<center><textarea id="textarea"></textarea></center>					
+
+		    </form>
+
+		</div>
+	</div>
+	<br>
+    <br>
+	<br>
+	<br>
+	<br>
+
+	
+	<style>
+		.fa {
+		padding: 20px;
+		font-size: 20px;
+		width: 30px;
+		text-align: center;
+		text-decoration: none;
+		margin: 5px 2px;
+		border-radius: 50%;
+		}
+
+		.fa:hover {
+			opacity: 0.7;
+		}
+
+		#textarea{
+			display: none;
+		}
+
+	</style>
+	
+	</head>
+	
+	<body>
+
+
+	<script>
+
+		function showContact() {
+			var r=document.getElementById("textarea");
+			if(r.style.display=="none"){
+				r.style.display="block";
+			}else{
+				r.style.display="none";
+			}
+			// document.getElementById('textarea').innerHTM=data;
+		  var xhttp = new XMLHttpRequest();
+		  xhttp.onreadystatechange = function() {
+		    if (this.readyState == 4 && this.status == 200) {
+		     document.getElementById("textarea").innerHTML = this.responseText;
+		    }
+		  };
+		  xhttp.open("GET", "getContact.php?name="+document.getElementById("username").value, true);
+		  xhttp.send();
+		}
+		
+	</script>
+
+</html>

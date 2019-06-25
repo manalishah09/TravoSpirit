@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TravoSpirit | Chardham</title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="shortcut icon" type="image/png" href="logo.png"">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+    <style>
+
+    .nav1{
+     font-family: 'Montserrat', sans-serif;
+     font-size: 16px;
+     font-weight: 400;
+     color:#ffffff;
+     text-decoration: none !important;
+     padding-left: 40px;
+
+ }
+ .navbar1{
+        box-shadow:  0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.25);
+
+ }
+ a:hover{
+  color:#fe435b;
+}
+a:active{
+  color:#fe435b;
+  border-bottom: 5px;
+  border-color: #fe435b;
+}
+
+.hide{
+    display: none;
+}
+
+#page_info{
+    padding: 20px;
+    background: #AAFC1B /*#AAFC1B*/ ;
+    margin-bottom: 40px;
+    box-shadow:  0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.30);
+}
+
+#sidenav{
+    font-size: 20px;
+}
+
+
+.button1 {
+    background-color: #0244AA; 
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    width: 200px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    border-radius: 10px;
+}
+
+.button2:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.row{
+    content: "";
+    display: table;
+    clear: both;
+    padding: 15px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color:#cfcfd1 ;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    color:#000000;
+}
+
+
+.Search,.tours{
+    font-family: 'Montserrat', sans-serif;
+}
+.dropdown-content a {
+    color: #ffffff;
+    padding: 12px 16px 10px;
+    text-decoration: none;
+    display: block;
+    font-family:'Montserrat', sans-serif; 
+}
+.dropdown:hover .dropdown-content {display: block;}
+
+.foot_ul{
+    list-style: none;
+    text-decoration: none;   
+    list-style-type: none;
+}
+.foot_ul a{
+    text-decoration: none;
+    color:black;
+}
+#foot_tbl   {
+    table-layout: fixed;
+    width:100%;
+}
+.tbl_col{
+    width: 25%;
+}
+#foot{
+    background-color: #131a2f;
+    color: #ffffff;
+
+
+}
+
+
+#foot_pre{
+    background: transparent;
+    border: none;
+    font-size: 15px;
+}
+.link{
+    color: #ffffff;
+}
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.fakeimg{
+    width:94%;
+    height: 200px;
+    border-radius: 6px;
+    box-shadow:  0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.hr{
+    width: 239px;
+    margin-left: 0;
+    border-color: black;
+}
+
+.tab{
+    background-color: white;
+    color: #131a2f;
+    padding: 25px;
+    box-shadow:  0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+
+
+
+</style>
+
+
+<!--
+     table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    }
+
+thead{
+        background-color: #dddddd;
+}
+
+td, th {
+    border: 1px solid #555555;
+    text-align: left;
+    padding: 8px;
+    }
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+    }
+
+
+
+
+    #hotel table,#hotel td,#hotel th
+    {
+    text-align: center;
+    border:1px solid white;
+    font-size: 17px;
+} 
+
+-->
+
+
+
+</head>
+<body style="margin: 0;     background: linear-gradient(to right, #ccffff 0%, #ccffcd 100%);">
+    <div id="top" style="margin: 0;">
+         <div class="navbar1" style=" position:relative; margin-top:40px; padding-left: 40px; padding-right: 60px;margin-right:40px; margin-left:40px; background-color: #131a2f; height:120px; z-index: 999;">
+
+          <div style="float:left;padding-top: 20px;">
+            <div style="float:left"><img src="logo.png"></div>
+            <div style="float:right;font-family: 'Montserrat', sans-serif; color:#ffffff;"><h2>TRAVOSPIRIT</h2></a>
+              <p style="margin-top: -15px; font-weight: 10px; color: #c9cfd8; padding-left: 10px;">Travel Agency</p></div>
+
+            </div>
+            <div style="padding-top: 50px;">
+              <div style="float:left;padding-left: 150px;">
+                <a  class="nav1" href="index_n.html">Home</a>
+                <a  class="nav1" href="AboutUs.html">About Us</a>
+                <a  class="nav1" href="Blog.html">Blogs</a>
+                <a  class="nav1" href="holidays.html">Holidays</a>
+                <a  class="nav1"  href="contact_us.html">Contact Us</a>
+                <a  class="nav1"  href="Emergency.html">Emergency Contacts</a>
+                 
+                
+              </div>
+            </div>
+          </div>
+        </div>
+            <br>
+            <br>
+            <div class="container">
+                <div id="page_info" class="col-md-12">                            
+                    <div id="sidenav" class="col-md-3" style="padding: 10px;">
+                        <img class="fakeimg" src="https://s3.ap-south-1.amazonaws.com/heenawebdata/front/tourmaster/kedarnath1509963837.jpg">
+                        <h2>CHARDHAM YATRA TOUR</h2>
+                        <hr class="hr">
+                        <b>13 Nights</b>
+                        <br>
+                        <br>
+                        <ul type="circle">
+                            <li>BADRINATH</li>
+                            <li>GANGOTRI</li>
+                            <li>HARIDWAR</li>
+                            <li>SITAPUR</li>
+                            <li>KRDARNATH</li>
+                            <li>YAMUNOTRI</li>
+                            <li>RISHIKESH</li>
+                            <li>UTTARKASHI</li>
+                            <li>GARHWAL SRINAGAR</li>
+                        </ul>
+                        <hr class="hr">
+                        <h5>INR 66000.00 (Per Couple)</h5>  
+                        <p> Deparures Oct 2018 </p>
+                        <hr class="hr">
+                        <a onclick="Info()" style="color:black; text-decoration: none; cursor: pointer;"><button class="button1 button2">Itinerary</button></a><br><br>
+                        <a onclick="Hotel()" style="color:black; text-decoration: none; cursor: pointer;"><button class="button1 button2">Hotel Information</button></a><br><br>
+                        <a onclick="Cancel()" style="color:black; text-decoration: none; cursor: pointer;"><button class="button1 button2">Cancellation</button></a><br><br>
+                    </div>
+
+
+
+
+
+                    <!--
+
+                        <!DOCTYPE html>
+                            <html>
+                            <head>
+                            <style>
+                            .button {
+                                background-color: #4CAF50; /* Green */
+                                border: none;
+                                color: white;
+                                padding: 15px 32px;
+                                text-align: center;
+                                text-decoration: none;
+                                display: inline-block;
+                                font-size: 16px;
+                                margin: 4px 2px;
+                                cursor: pointer;
+                                -webkit-transition-duration: 0.4s; /* Safari */
+                                transition-duration: 0.4s;
+                            }
+
+                            .button1 {
+                                box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+                            }
+
+                            .button2:hover {
+                                box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+                            }
+                            </style>
+                            </head>
+                            <body>
+
+                            <h2>Shadow Buttons</h2>
+                            <p>Use the box-shadow property to add shadows to the button:</p>
+
+                            <button class="button button1">Shadow Button</button>
+                            <button class="button button2">Shadow on Hover</button>
+
+                            </body>
+                            </html>
+
+
+                        -->
+
+
+
+
+
+
+                        <div id="info" class="tab col-md-9">
+                            <h1>Itenary</h1>
+                            <h2>Day 1</h2>
+                            <h3>Delhi-Haridwar</h3>
+
+                            <p>
+                                Arrive New Delhi by 12:00 and reach on your own at our pickup point. After lunch proceed for Haridwar (200 kms, approx 7/8 hrs). Night halt at Haridwar.
+
+
+                            </p>
+
+                            <h2>Day 2</h2>
+                            <h3>Haridwar-Rishikesh-Haridwar</h3>
+
+                            <p>
+                                After breakfast, full day sightseeing of Rishikesh which includes Laxmanjhula, Ramjhulla. Parmarthdham, Swargasram Geeta Bhavan and cross the ganges by boat. After lunch visit to the Famous Har ki Paudi, on Ganga Ghat, to take part in the Ganga Aarti. Night halt at Haridwar.
+
+
+                                </p>
+
+                            <h2>Day 3</h2>
+                            <h3>Haridwar-Barkot (Yamunotri)</h3>
+
+                            <p>
+                                After breakfast proceed for Barkot. (196 Kms, approx 8 / 10 hrs) enroute visit the famous Kempty waterfalls at Mussoorie (from Bus) & Night halt at Kharadi (Barkot) (Yamunotri).
+
+
+                            </p>
+
+                            <h2>Day 4</h2>
+                            <h3>Barkot – Yamunotri – Barkot</h3>
+
+                            <p>
+                            Early morning 04:00 A.M. leave for Jhankichatti (52kms), from here 6km. trekking for Yamunotri. Passengers can opt for Doli / Horse (at your own cost) or by walk. (6500ft.) Night halt at Kharadi (Barkot) (Yamunotri).
+
+
+                            </p>
+
+                            <h2>Day 5</h2>
+                            <h3>Barkot – Uttarkashi</h3>
+
+                            <p>
+                            After Breakfast leave for Uttarkashi (100 Kms, approx 4-5 hrs.).After lunch visit Kashi Vishwanath Temple. Night halt at Uttarkashi.
+
+
+                            </p>
+
+                            <h2>Day 6</h2>
+                            <h3>Uttarkashi – Gangotri – Uttarkashi (200 Kms)</h3>
+
+                            <p>
+                            Early Morning 04:00 A.M. proceed to Gangotri. After breakfast visit to Gangotri Temple. An return to Uttarkashi, enroute we stop for a Holy Dip at Gangnani Hot Water Springs. Night halt at Uttarkashi.
+                             </p>
+
+                            <h2>Day 7</h2>
+                            <h3>Uttarkashi - Sitapur(Kedar)</h3>
+
+                            <p>
+                                After breakfast proceed to Kedarnath (270 Kms, approx 10-11 hrs.) enroute visit union of Alaknanda and Mandakini rivers.(From the Bus). Night halt at Sitapur.
+
+
+                            </p>
+
+                            <h2>Day 8</h2>
+                            <h3>Sitapur – Kedarnath</h3>
+
+                            <p>
+                                After breakfast leave for Gaurikund by Local Share a Taxi. Reach Gaurikund & start trek or Horse Riding or Doli (at your own cost) one way for Kedarnath 16 kms. (11750 ft.) Perform Pooja & Darshan at Kedarnathji Temple one of the 12 Jyotirlings. Night halt at Kedarnath. ( In case party Books Helicopter, taxi to Helipad is own Cost and if the Helicopter does not fly due to weather Conditions, Accomodation and Food cost for stay in Sitapur, will have to be paid by Party. (In Kedarnath Food will be simple menu) Only 1 Bucket Hot water will be provided here for Bath.
+
+
+                            </p>
+
+                            <h2>Day 9</h2>
+                            <h3>Kedarnath – Sitapur</h3>
+
+                            <p>
+                                After Breakfast proceed to Sitapur. After lunch visit holy place where Trijugi Narayani and God Shankar - Parvati got married.(Subject to Road Condition and Traffic) Night halt at Sitapur.
+
+
+                            </p>
+                            <h2>Day 10</h2>
+                            <h3>Sitapur - Badrinath</h3>
+
+                            <p>
+                                    Early morning at 4.00am. leave by bus for Badrinath. (253 Kms, approx 13-14hrs.) (10,350ft.) Night halt at Badrinath.
+
+
+
+                            </p>
+                             <h2>Day 11</h2>
+                            <h3>Badrinath</h3>
+
+                            <p>
+                                    Morning take a holy dip at Badrinath hot water springs and darshan. Evening free for local sightseeing of Mana Village near China border. Night halt at Badrinath.
+
+                             </p>
+                             <h2>Day 12</h2>
+                            <h3>Badrinath- Garhwal Srinagar</h3>
+
+                            <p>
+                                After fast leave for Garhwal Srinagar (220 Kms, approx 10-12 hrs.) en route enjoy the cable ride at Auli (at your own cost). Night halt at Garhwal Srinagar.
+
+
+
+
+                            </p>
+                             <h2>Day 13</h2>
+                            <h3>Garhwal Srinagar – Haridwar</h3>
+
+                            <p>
+                                    After breakfast proceed for Haridwar (140 Kms, approx 6-7 hrs.) En route enjoy the adventurous white water rafting (at your own cost). If anyone wish to visit Mata Chandi devi & Mansha Devi temple you can go at your own cost. Night halt at Haridwar.
+
+
+
+
+                            </p>
+                              <h2>Day 14<h2>
+                            <h3>Haridwar-Delhi</h3>
+
+                            <p>
+                                    After breakfast proceed for Delhi (200 Kms, approx 7/8 hrs) & Tour ends with memorable experience with Heena Tours & Travels.
+
+                                </p>
+
+                            This Tour starts with Lunch on Day 01 & ends with Lunch Day 14.
+
+
+                        </div>
+                        <div id="hotel" class="tab col-md-9 hide">
+                            <h1>Hotel Information</h1>
+                            <br>
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Location</th>
+                                        <th>Nights</th>
+                                        <th>Hotel Name</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Haridwar</td>
+                                        <td> 2</td>
+                                        <td>Godwin Hotel</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Barkot (Yamunotri)</td>
+                                        <td>  2</td>
+                                        <td>Camp Nirvana</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gangotri (Uttarkashi) </td>
+                                        <td>  2</td>
+                                        <td>Shivlinga</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Kedarnath (Sitapur) </td>
+                                        <td>  2</td>
+                                        <td>Hotel New Shivalik</td>
+                                    </tr>
+                                     <tr>
+                                        <td> Kedarnath</td>
+                                        <td>  2</td>
+                                        <td>Punjab & Sindh Avas (4 Pax in 1 Room)</td>
+                                    </tr>
+                                   
+                                     <tr>
+                                        <td>Kedarnath (Sitapur) </td>
+                                        <td> 1</td>
+                                        <td>Hotel New Shivalik</td>
+                                    </tr>
+                                     <tr>
+                                        <td>Badrinath</td>
+                                        <td>  2</td>
+                                        <td>Bholagiri Ashram / Dwarikesh / Sarovar Portico     </td>
+                                    </tr>
+                                     <tr>
+                                        <td>Srinagar (Gharwal)  </td>
+                                        <td>  1</td>
+                                        <td>Hotel Chaahat</td>
+                                    </tr>
+                                      <tr>
+                                        <td>Haridwar</td>
+                                        <td>  1</td>
+                                        <td>Godwin Hotel</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <br>
+                        </div>                      
+
+
+
+                        <div id="cancel" class="tab col-md-9 hide">
+                            <h1>Easy Cancellation</h1>
+                            <h4>But we actually don't want you to see this - We believe you deserve holidays..</h4>
+                            <br>
+                            <ul style="list-style: square;">
+                                <li>Before 30 Days, of Tour Departure  - Rs. 5000/= per person</li>
+                                <li>Between 15 to 30 Days – 25% of the Tour Cost</li>
+                                <li>Between 10 to 15 Day – 50% of the Tour Cost</li>
+                                <li>Between 5 to 10 Days – 75% of the Tour Cost</li>
+                                <li> Within 5 days – 100% of the Tour Cost</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+                <script type="text/javascript">
+                    var modal = document.getElementById('myModal1');
+
+                    // Get the button that opens the modal
+                    var btn = document.getElementById("id01");
+
+                    // Get the <span> element that closes the modal
+                    var span = document.getElementsByClassName("close")[0];
+
+                    // When the user clicks the button, open the modal 
+                    btn.onclick = function() {
+                        modal.style.display = "block";
+                    }
+
+                    // When the user clicks on <span> (x), close the modal
+                    span.onclick = function() {
+                        modal.style.display = "none";
+                    }
+
+                    // When the user clicks anywhere outside of the modal, close it
+                    window.onclick = function(event) {
+                        if (event.target == modal) {
+                            modal.style.display = "none";
+                        }
+                    }
+
+
+
+                    function Info(){
+
+                        // Get desired elements
+                        var element = document.querySelectorAll(".tab");
+
+                        // Iterate through the retrieved elements and add the necessary class names.
+                        for(var i = 0; i < element.length; i++)
+                        {
+                            element[i].classList.add("hide");
+                        }
+                        document.querySelector("#info").classList.remove("hide");
+                    }
+
+                    function Hotel(){
+
+                        // Get desired elements
+                        var element = document.querySelectorAll(".tab");
+
+                        // Iterate through the retrieved elements and add the necessary class names.
+                        for(var i = 0; i < element.length; i++)
+                        {
+                            element[i].classList.add("hide");
+                        }
+                        document.querySelector("#hotel").classList.remove("hide");
+                    }
+
+                    function Cancel(){
+
+                        // Get desired elements
+                        var element = document.querySelectorAll(".tab");
+
+                        // Iterate through the retrieved elements and add the necessary class names.
+                        for(var i = 0; i < element.length; i++)
+                        {
+                            element[i].classList.add("hide");
+                        }
+                        document.querySelector("#cancel").classList.remove("hide");
+                    }
+
+
+
+                </script>
+
+  <footer id="foot"> 
+          <table id="foot_tbl">
+            <tr>
+              <td class="tbl_col">
+                <ul class="foot_ul">
+                  <li><h1 style="color: #ffb20c;">About Us</h1></li>
+                  <p>It all began in the year 1987, when two visionaries met, in a very humble way. Shri Jitendra N. Shah, from the traditional Gujrati Trading Community, <a style="color: #ffb20c" href="AboutUs.html">Read More</a></p>
+                </ul>
+              </td>
+              <td class="tbl_col" style="text-align: center;">
+                <br>
+                <form action="#">
+                  <h4 style="font-size: 120%; font-family: Raleway;">GUEST SPEAKS:</h4>
+                  <p><i>"Travelling to Darjeeling through Travospirit was a great pleasure. <br>Came back with cherishable memories. A Big Thank you for <br>all your guidance."</i></p>
+                  <i style="font-size: 130%; color: #c1bcb2;">Please help us serve you better:</i>
+                  <br>
+
+                  <br>
+                  <button type="button" style="background-color: #ffb20c; border: none; height: 30px; width: 100px;" onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSdhJdC3QSnQXcGqNVUphUSBgOCqUddKaMcoryJEI6m7BkW8nw/viewform'" ><b>Feedback</b></button>
+                </form>
+                <br>
+              </td>
+
+              <td class="tbl_col">
+                <h1 style="color: #ffb20c;">Contact Us</h1>
+                <p>No 303-305, 3rd Floor, M L Space,
+                  D J Road,<br>Station Road,
+                Vile Parle West, Mumbai – 400056.</p>
+                <br>
+                <ul class="foot_ul" style="margin-right: 150px;">
+                  <li><i class="fab fa-facebook-f"></i>  <a style="color: #ffffff" href='#'>Facebook</a></li>
+                  <br>
+                  <li><i class="fab fa-instagram"></i>  <a style="color: #ffffff;"  href='#'>Instagram</a></li>
+                  <br>
+                  <li><i class="fab fa-twitter"></i>  <a style="color: #ffffff;" href='#'>Twitter</a></li>
+                </ul>
+              </td>
+            </tr>
+          </table>
+        </footer>
+            </body>

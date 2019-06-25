@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TravoSpirit | Holidays</title>
+	<link rel="shortcut icon" type="image/png" href="logo.png">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Lobster|Mali:400,700|Montserrat" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<style>
+	a{
+		font-family: 'Montserrat', sans-serif;
+		font-size: 16px;
+		font-weight: 400;
+		color:#ffffff;
+		text-decoration:none !important;
+		padding-left: 40px;
+	}
+
+	body{
+		font-family: 'Montserrat', sans-serif; 
+/*		background-color: #fffddd;
+
+https://images.unsplash.com/photo-1532202509491-ee922e576bb8?ixlib=rb-0.3.5&s=41752b618055fd927253bd6adc7b727f&auto=format&fit=crop&w=753&q=80
+
+*/	}
+
+#top {
+	background-image: url(https://images.unsplash.com/photo-1532202509491-ee922e576bb8?ixlib=rb-0.3.5&s=41752b618055fd927253bd6adc7b727f&auto=format&fit=crop&w=753&q=80);
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	-webkit-background-size: cover;  
+	font-family: 'Montserrat', sans-serif;
+	padding: 20px;
+/*		height: 640px;*/
+	width: 100%;
+}
+
+
+.para{
+	margin-left: auto; 
+	max-width: 800px;  
+	margin-right: auto; 
+	font-size: 30px; 
+	color: black;
+	font-family: 'Lobster', cursive;
+}
+
+.card{
+	padding-top: 15px;
+	border-radius: 5px;
+	margin-bottom: 15px;
+}
+
+.card:hover{
+	box-shadow: 0px 0px 50px 11px rgba(218,220,224,1);
+}
+
+.fakeimg {
+	background-color:#C7F50B;
+	width: 100%;
+	height: 303px;
+	box-shadow:  0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.overlay {
+	position: absolute;
+	top: 15px;
+	left: 15px;
+	right: 0;
+	background-color: #03FA7E;
+	overflow: hidden;
+	width: 92.2%;
+	height: 58.3%;
+	-webkit-transform: scale(0);
+	-ms-transform: scale(0);
+	transform: scale(0);
+	-webkit-transition: .3s ease;
+	transition: .3s ease;
+	opacity: 0.7;
+}
+.imghover:hover .overlay {
+	-webkit-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1);
+}
+.text {
+	color: white;
+	font-size: 15px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+		/*text-align: center;
+	*/	}
+
+	
+
+	.content{
+		padding: 15px;
+		padding-right: 20px;
+		color: #0031c4;
+	}
+	.row{
+		content: "";
+		display: table;
+		clear: both;
+		padding: 15px;
+	}
+	a:hover{
+		color:#fe435b;
+	}
+	a:active{
+		color:#fe435b;
+		border-bottom: 5px;
+		border-color: #fe435b;
+	}
+
+
+
+
+
+
+	.button {
+		border-radius: 4px;
+		background-color: #fe435b;
+		border: none;
+		color: #FFFFFF;
+		text-align: center;
+		font-size: 12px;
+		padding: 10px;
+		width: 140px;
+		transition: all 0.5s;
+		cursor: pointer;
+		margin: 5px;
+	}
+
+	.button span {
+		cursor: pointer;
+		display: inline-block;
+		position: relative;
+		transition: 0.5s;
+	}
+
+	.button span:after {
+		content: '\00bb';
+		position: absolute;
+		opacity: 0;
+		top: 0;
+		right: -20px;
+		transition: 0.5s;
+	}
+
+	.button:hover span {
+		padding-right: 25px;
+	}
+
+	.button:hover span:after {
+		opacity: 1;
+		right: 0;
+	}
+
+
+	.nav1{
+		font-family: 'Montserrat', sans-serif;
+		font-size: 16px;
+		font-weight: 400;
+		color:#ffffff;
+		text-decoration: none;
+		padding-left: 40px;
+	}
+	a:hover{
+		color:#fe435b;
+	}
+	a:active{
+		color:#fe435b;
+		border-bottom: 5px;
+		border-color: #fe435b;
+	}
+	.dropdown {
+		position: relative;
+		display: inline-block;
+	}
+	.dropdown-content {
+		display: none;
+		position: absolute;
+		background-color:#cfcfd1 ;
+		min-width: 160px;
+		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		z-index: 1;
+		color:#000000;
+	}
+	.Search,.tours{
+		font-family: 'Montserrat', sans-serif;
+	}
+	.dropdown-content a {
+		color: #ffffff;
+		padding: 12px 16px 10px;
+		text-decoration: none;
+		display: block;
+		font-family:'Montserrat', sans-serif; 
+	}
+	.dropdown:hover .dropdown-content {display: block;}
+
+	.foot_ul{
+		list-style: none;
+		text-decoration: none;   
+		list-style-type: none;
+	}
+	.foot_ul a{
+		text-decoration: none;
+		color:black;
+	}
+	#foot_tbl   {
+		table-layout: fixed;
+		width:100%;
+	}
+	.tbl_col{
+		width: 25%;
+	}
+	#foot{
+		background-color: #131a2f;
+		color: #ffffff;
+
+
+	}
+
+
+	#foot_pre{
+		background: transparent;
+		border: none;
+		font-size: 15px;
+	}
+	.link{
+		color: #ffffff;
+	}
+	.modal {
+		display: none; /* Hidden by default */
+		position: fixed; /* Stay in place */
+		z-index: 1; /* Sit on top */
+		padding-top: 100px; /* Location of the box */
+		left: 0;
+		top: 0;
+		width: 100%; /* Full width */
+		height: 100%; /* Full height */
+		overflow: auto; /* Enable scroll if needed */
+		background-color: rgb(0,0,0); /* Fallback color */
+		background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+	}
+
+	/* Modal Content */
+	.modal-content {
+		background-color: #fefefe;
+		margin: auto;
+		padding: 20px;
+		border: 1px solid #888;
+		width: 40%;
+	}
+
+	/* The Close Button */
+	.close {
+		color: #aaaaaa;
+		float: right;
+		font-size: 28px;
+		font-weight: bold;
+	}
+
+	.close:hover,
+	.close:focus {
+		color: #000;
+		text-decoration: none;
+		cursor: pointer;
+	}
+
+	.wrap{
+		position:relative;
+		width:80vmin; height:80vmin;
+		margin:0 auto;
+		background:none;
+		transform:scale(0.2) translatez(0px);
+		opacity:0;
+		transition:transform .5s, opacity .5s;
+	}
+	.wrap_a{
+		position:absolute;
+		left:0; top:0;
+		width:47.5%; height:47.5%;
+		overflow:hidden;
+		transform:scale(.5) translateZ(0px);
+		background:white;
+	}
+	.wrap div{
+		height:100%;
+		background-size:cover;
+		opacity:.5;
+		transition:opacity .5s;
+		border-radius:inherit;
+	}
+	.wrap_a:nth-child(1){
+		border-radius:40vmin 0 0 0;
+		transform-origin: 110% 110%;
+		transition:transform .4s .15s;
+	}
+	.wrap_a:nth-child(1) div{
+		background-image:url('https://images.unsplash.com/photo-1524056403348-6edcdbeca1a5?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=732649ac00b8f8882434570f3a244705&auto=format&fit=crop&w=1350&q=80');
+		background-position: right;
+/*  filter: grayscale(100%);
+*/}
+.wrap_a:nth-child(2){
+	border-radius:0 40vmin 0 0;
+	left:52.5%;
+	transform-origin: -10% 110%;
+	transition:transform .4s .2s;
+}
+.wrap_a:nth-child(2) div{
+	background-image:url('https://images.unsplash.com/photo-1494280986787-c49b328829dd?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=5bbb3826bc22470c3e2f19b15dbd0403&auto=format&fit=crop&w=1350&q=80');
+	background-position: center;
+  /*  filter: grayscale(100%);
+  */
+}
+.wrap_a:nth-child(3){
+	border-radius:0 0 0 40vmin;
+	top:52.5%;
+	transform-origin: 110% -10%;
+	transition:transform .4s .25s;
+}
+.wrap_a:nth-child(3) div{
+	background-image:url('https://images.unsplash.com/photo-1518802508264-76256089cddb?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=c971a8873a8bdd42fa37fac18e4ef4c1&auto=format&fit=crop&w=634&q=80');
+	background-position: top;
+/*  filter: grayscale(100%);
+*/
+}
+.wrap_a:nth-child(4){
+	border-radius:0 0 40vmin 0;
+	top:52.5%; left:52.5%;
+	transform-origin: -10% -10%;
+	transition:transform .4s .3s;
+}
+.wrap_a:nth-child(4) div{
+	background-image: url('https://images.unsplash.com/photo-1504952763299-66ca4fcb05b3?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=0b5b7ca9da72293e2c73cbb1f11bfa1c&auto=format&fit=crop&w=1267&q=80s');
+	background-position: bottom;
+/*  filter: grayscale(100%);
+*/
+
+}
+.wrap_a:nth-child(5){
+	width:55%;height:55%;
+	left:22.5%; top:22.5%;
+	border-radius:50vmin;
+	box-shadow:0 0 0 5vmin #E3DFD2;
+	transform:scale(1);
+}
+.wrap_a:nth-child(5) div{
+	background-image: url('seasons.jpg');
+	background-size: 330px;
+	background-position: center;
+/*  filter: grayscale(100%);
+*/
+}
+.wrap_span{
+	position:relative;
+	display:block;
+	margin:0 auto;
+	top:45vmin;
+	width:10vmin; height:10vmin;
+	border-radius:100%;
+	background:#337ACA;
+	transform:translateZ(0px);
+}
+.wrap_span .wrap_span{
+	position:absolute;
+	width:60%;height:3px;
+	background:#ACA696;
+	left:20%; top:50%;
+	border-radius:0;
+}
+.wrap_span .wrap_span:after, .wrap_span .wrap_span:before{
+	content:'';
+	position:absolute;
+	left:0; top:-1.5vmin;
+	width:100%; height:100%;
+	background:inherit;
+}
+.wrap_span .wrap_span:after{
+	top:1.5vmin;
+}
+.wrap_span:hover + .wrap, .wrap:hover{
+	transform:scale(1) translateZ(0px);
+	opacity:1;
+}
+.wrap_span:hover + .wrap .wrap_a, .wrap:hover .wrap_a{
+	transform:scale(1) translatez(0px);
+}
+.wrap_a:hover .wrap_div{
+	opacity:1;
+	transform:translatez(0px);
+}
+
+
+
+
+</style>
+</head>
+
+
+<body style="margin: 0px;">
+
+	<div id="top" style="margin: 0;">
+        <div class="navbar1" style=" position:relative; margin-top:20px; padding-left: 40px; padding-right: 60px;margin-right:40px; margin-left:40px; background-color: #131a2f; height:120px; z-index: 999;">
+
+			<div style="float:left;padding-top: 20px;">
+				<div style="float:left"><img src="logo.png"></div>
+				<div style="float:right;font-family: 'Montserrat', sans-serif; color:#ffffff;"><h2>TRAVOSPIRIT</h2>
+					<p style="margin-top: -15px; font-weight: 10px; color: #c9cfd8; padding-left: 10px;">Travel Agency</p></div>
+
+				</div>
+				<div style="padding-top: 50px;">
+					<div style="float:left;padding-left: 100px;">
+						<a  class="nav1" href="index_n.html">Home</a>
+						<a class="nav1" href="AboutUs.html">About Us</a>
+						<a  class="nav1" href="Blog.html">Blogs</a>
+						<a  class="nav1" href="holidays.html">Holidays</a>
+						
+							<a class="nav1" class="dropbtn" href="contact_us.html">Contact Us</a> 
+							
+						
+					</div>
+				</div>
+				<div class="login">
+					<a  class="nav1" id="id01" href="Emergency.html">Emergency Contacts</a>
+					
+
+				</div>
+				</div>
+				<center style="margin-top: 80px">
+					<h1 style="font-size: 70px; font-weight:600; color: #fe435b; font-family: 'Mali',cursive; margin-bottom: 30px">Where will you go next ?</h1>
+					<p class="para">Welcome to Travospirit tours, carefully crafted for travelers and adventurers. Pack your bags, hit the road and don't forget to write down all of your amazing stories!</p>   
+				</center>
+				<span class="wrap_span"><span class="wrap_span"></span></span>
+				<div class="wrap">
+					<a onclick="Summer()" class="wrap_a" href="#"><div class="wrap_div"></div></a>
+					<a onclick="Spring()" class="wrap_a" href="#"><div class="wrap_div"></div></a>
+					<a onclick="Autumn()" class="wrap_a" href="#"><div class="wrap_div"></div></a>
+					<a onclick="Winter()" class="wrap_a" href="#"><div class="wrap_div"></div></a>
+					<a onclick="Seasons()"class="wrap_a" href="#"><div class="wrap_div"></div></a>
+				</div>
+
+			</div>
+			<br>
+			<br>
+
+<script type="text/javascript">
+var modal = document.getElementById('myModal1');
+
+// Get the button that opens the modal
+var btn = document.getElementById("id01");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+	modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+	modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+	if (event.target == modal) {
+		modal.style.display = "none";
+	}
+}
+</script>
+
+<div class="container">
+
+	<div class="row" >
+		<div id="summer" class="tab">	
+			<div class="card col-md-4">
+				<div class="imghover">
+					<a href="#" style="padding:0;"><img class="fakeimg" src="https://images.unsplash.com/photo-1499421182038-6a275abceb3b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=41d3fed1d337e9cefaf22dbb3d83686b&auto=format&fit=crop&w=500&q=60"></a>
+					<div class="overlay">
+						<div class="text">
+							<b>10 Days & 9 Nights</b>
+							<br>
+							<br>
+							<ul type="square">
+								<li>Jammu</li>
+								<li>Pahalgam</li>
+								<li>Gulmarg</li>
+								<li>Srinagar</li>
+								<li>Sonmarg</li>
+								<li>Vaishnodevi</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="content">
+					<h4>KASHMIR TOUR</h4>
+					<hr>
+					<h5> INR 76000.00 (Per Couple) </h5>	
+					
+					<hr>
+					<div>
+						<button onclick="window.location.href='Kashmir.html'" class="button"><span>View details</span></button>
+						<button class="button"><span>Book Now</span></button>
+					</div>
+				</div>
+			</div>
+
+			<div class="card col-md-4">
+				<div class="imghover">
+					<a href="#" style="padding:0;"><img class="fakeimg" src="https://s3.ap-south-1.amazonaws.com/heenawebdata/front/tourmaster/689014604394421528445678.jpg"></a>
+					<div class="overlay">
+						<div class="text">
+							<b>7 Days & 6 Nights</b>
+							<br>
+							<br>
+							<ul type="square">
+								<li>GANGTOK</li>
+								<li>LACHUNG</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="content">
+					<h4>SIKKIM TOUR</h4>	
+					<hr>
+					<h5> INR 49500.00 (Per Couple) </h5>	
+					
+					<hr>
+					<div>
+						<button onclick="window.location.href='Sikkim.html'" class="button"><span>View details</span></button>
+						<button class="button"><span>Book Now</span></button>
+					</div>
+				</div>
+			</div>
+
+			<div class="card col-md-4">
+				<div class="imghover">
+					<a href="#" style="padding:0;"><img class="fakeimg" src="https://s3.ap-south-1.amazonaws.com/heenawebdata/front/tourmaster/Tawang--Bomdila514736961661528554388.jpg"></a>
+					<div class="overlay">
+						<div class="text">
+							<b>13 Days & 12 Nights</b>
+							<br>
+							<br>
+							<ul type="square">
+								<li>Kaziranga</li>
+								<li>Bomdila</li>
+								<li>Tawang</li>
+								<li>Dirang</li>
+								<li>Shillong</li>
+								<li>Tezpur</li>
+								<li>Guwahati</li>
+
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="content">
+					<h4>MEGHALAYA & ASSAM TOUR</h4>
+					<hr>
+					<h5>Tour cost available on request </h5>	
+					
+					<hr>
+					<div>
+						<button onclick="window.location.href='Meghalaya.html'" class="button"><span>View details</span></button>
+						<button class="button"><span>Book Now</span></button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="row">
+		<div id="spring" class="tab">
+			<div class="card col-md-4">
+				<div class="imghover">
+					<a href="#" style="padding:0;"><img class="fakeimg" src="https://s3.ap-south-1.amazonaws.com/heenawebdata/front/tourmaster/South11527752058.png"></a>
+					<div class="overlay">
+						<div class="text">
+							<b>9 Days & 8 Nights</b>
+							<br>
+							<br>
+							<ul type="square">
+								<li>BANGALORE</li>
+								<li>MYSORE</li>
+								<li>OOTY</li>
+								<li>KODAIKANAL</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="content">
+					<h4>SOUTH TOUR</h4>	
+					<hr>
+					<h5>INR 69500.00 (Per Couple)</h5>	
+					
+					<hr>
+					<div>
+						<button onclick="window.location.href='SouthTour.html'" class="button"><span>View details</span></button>
+						<button class="button"><span>Book Now</span></button>
+					</div>
+				</div>
+			</div>
+
+			<div class="card col-md-4">
+				<div class="imghover">
+					<a href="#" style="padding:0;"><img style="height: 303px" class="fakeimg" src="https://s3.ap-south-1.amazonaws.com/heenawebdata/front/tourmaster/Day1HussainSagarLakeshutterstock152331395014327482701530264275.jpg"></a>
+					<div class="overlay">
+						<div class="text">
+							<b>4 Days & 3 Nights</b>
+							<br>
+							<br>
+							<ul type="square">
+								<li>Hyderabad</li>
+								<li>Ramoji Film City</li>
+								<li>Birla Temple</li>
+								<li>Charminar</li>
+								<li>Hussain Sagar Lake</li>
+								<li>NTR Gardens</li>
+								<li>Salar Jung Museum</li>
+
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="content">
+					<h4>HYDERABAD TOUR</h4>	
+					<hr>
+					<h5> INR 30000.00 (Per Couple) </h5>	
+					
+					<hr>
+					<div>
+						<button onclick="window.location.href='Hyderabad.html'" class="button"><span>View details</span></button>
+						<button class="button"><span>Book Now</span></button>
+					</div>
+				</div>
+			</div>
+
+			<div class="card col-md-4">
+				<div class="imghover">
+					<a href="#" style="padding:0;"><img class="fakeimg" src="https://s3.ap-south-1.amazonaws.com/heenawebdata/front/tourmaster/4-night-andaman-islands-tour-including-havelock-neil-and-ross-islands-in-port-blair-22181614673797481534339361.jpg"></a>
+					<div class="overlay">
+						<div class="text">
+							<b>6 Days & 5 Nights</b>
+							<br>
+							<br>
+							<ul type="square">
+								<li>Port Blair</li>
+								<li>Havelock Island</li>
+								<li>Radha Nagar Beach</li>
+								<li>Kala Pathar or Elephanta Island</li>
+								<li>North Bay Coral Island</li>
+								<li>Ross Island</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="content">
+					<h4>AMAZING ANDAMAN TOUR</h4>	
+					<hr>
+					<h5>INR 39000.00 (Per Couple) </h5>	
+					
+					<hr>
+					<div>
+						<button onclick="window.location.href='Andaman.html'" class="button"><span>View details</span></button>
+						<button class="button"><span>Book Now</span></button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="row">
+		<div id="autumn" class="tab">
+			<div class="card col-md-4">
+				<div class="imghover">
+					<a href="#" style="padding:0;"><img class="fakeimg" src="https://images.unsplash.com/photo-1505977003557-c907eece08e3?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=334e421a246cdbd4b0f5090bde3f2629&auto=format&fit=crop&w=500&q=60"></a>
+					<div class="overlay">
+						<div class="text">
+							<b>9 Days & 8 Nights</b>
+							<br>
+							<br>
+							<ul type="square">
+								<li>Jodhpur</li>
+								<li>Jaiselmer</li>
+								<li>Bikaner</li>
+								<li>Jaipur</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="content">
+					<h4>MAJESTIC RAJASTHAN</h4>
+					<hr>
+					<h5>INR 64500.00 (Per Couple)</h5>  
+
+					<hr>
+					<div>
+						<button onclick="window.location.href='Rajasthan.html'" class="button"><span>View details</span></button>
+						<button class="button"><span>Book Now</span></button>
+					</div>
+				</div>
+			</div>
+
+			<div class="card col-md-4">
+				<div class="imghover">
+					<a href="#" style="padding:0;"><img class="fakeimg" src="https://s3.ap-south-1.amazonaws.com/heenawebdata/front/tourmaster/blr-4-bg-2014236502061528889562.jpg"></a>
+					<div class="overlay">
+						<div class="text">
+							<b>8 Days & 7 Nights</b>
+							<br>
+							<br>
+							<ul type="square">
+								<li>Vythiri (Wayanad)</li>
+								<li>Coorg</li>
+								<li>Bandipur</li>
+								<li>4 Star Resorts</li>
+
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="content">
+					<h4>KARNATAKA & KERALA TOUR</h4>
+					<hr>
+					<h5>INR 100000.00 (Per Couple) </h5>	
+					
+					<hr>
+					<div>
+						<button onclick="window.location.href='Karnataka&Kerala.html'" class="button"><span>View details</span></button>
+						<button class="button"><span>Book Now</span></button>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="card col-md-4">
+				<div class="imghover">
+					<a href="#" style="padding:0;"><img class="fakeimg" src="https://s3.ap-south-1.amazonaws.com/heenawebdata/front/tourmaster/kedarnath1509963837.jpg"></a>
+					<div class="overlay">
+						<div class="text">
+							<b>14 Days & 13 Nights</b>
+							<br>
+							<br>
+							<ul type="square">
+								<li>BADRINATH</li>
+								<li>KEDARNATH</li>
+								<li>GANGOTRI</li>
+								<li>YAMUNOTRI</li>
+								<li>HARIDWAR</li>
+								<li>RISHIKESH</li>
+								<li>AULI</li>
+								<li>UTTARKASHI</li>
+								<li>SITAPUR</li>
+								<li>GARHWAL SRINAGAR</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="content">
+					<h4>CHARDHAM YATRA TOUR</h4>	
+					<hr>
+					<h5> INR 66000.00 (Per Couple) </h5>	
+					
+					<hr>
+					<div>
+						<button onclick="window.location.href='Chardham.html'"  class="button"><span>View details</span></button>
+						<button class="button"><span>Book Now</span></button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div id="winter" class="tab">
+			<div class="card col-md-4">
+				<div class="imghover">
+					<a href="#" style="padding:0;"><img class="fakeimg" src="https://s3.ap-south-1.amazonaws.com/heenawebdata/front/tourmaster/HP11528104940.jpg"></a>
+					<div class="overlay">
+						<div class="text">
+							<b>13 Days & 12 Nights</b>
+							<br>
+							<br>
+							<ul type="square">
+								<li>Amritsar</li>
+								<li>Dalhousie</li>
+								<li>Khajjiar</li>
+								<li>Dharamshala</li>
+								<li>Manali</li>
+								<li>Kullu</li>
+								<li>Shimla</li>
+								<li>Chandigarh</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="content">
+					<h4>HIMACHAL PRADESH TOUR</h4>	
+					<hr>
+					<h5> INR 102000.00 (Per Couple)</h5>	
+					
+					<hr>
+					<div>
+						<button onclick="window.location.href='Himachal.html'" class="button"><span>View details</span></button>
+						<button class="button"><span>Book Now</span></button>
+					</div>
+				</div>
+			</div>
+
+			<div class="card col-md-4">
+				<div class="imghover">
+					<a href="#" style="padding:0;"><img class="fakeimg" src="https://s3.ap-south-1.amazonaws.com/heenawebdata/front/tourmaster/k21527593949.jpg"></a>
+					<div class="overlay">
+						<div class="text">
+							<b>11 Days & 10 Nights</b>
+							<br>
+							<br>
+							<ul type="square">
+								<li>Cochin</li>
+								<li>Munnar</li>
+								<li>Thekkady</li>
+								<li>Kumarakom</li>
+								<li>Kanyakumari</li>
+								<li>Poovar</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="content">
+					<h4>BEST OF KERALA</h4>
+					<hr>
+					<h5> INR 90500.00 (Per Couple) </h5>	
+					
+					<hr>
+					<div>
+						<button onclick="window.location.href='Kerala.html'" class="button"><span>View details</span></button>
+						<button class="button"><span>Book Now</span></button>
+					</div>
+				</div>
+			</div>
+
+			<div class="card col-md-4">
+				<div class="imghover">
+					<a href="#" style="padding:0;"><img class="fakeimg" src="https://images.unsplash.com/photo-1522506209496-4536d9020ec4?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ab9a7f1d4d637d59e2daeb49bd03c397&auto=format&fit=crop&w=500&q=60"></a>
+					<div class="overlay">
+						<div class="text">
+							<b>8 Days & 7 Nights</b>
+							<br>
+							<br>
+							<ul type="square">
+								<li>Delhi</li>
+								<li>Mussoorie</li>
+								<li>Haridwar</li>
+								<li>Nainital</li>
+								<li>Ranikhet</li>
+								<li>Jim Corbett</li>								
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="content">
+					<h4>UTTARAKHAND TOUR</h4>
+					<hr>
+					<h5> INR 67000.00 (Per Couple) </h5>	
+					
+					<hr>
+					<div>
+						<button onclick="window.location.href='Uttarakhand.html'" class="button"><span>View details</span></button>
+						<button class="button"><span>Book Now</span></button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	
+	function Summer(){
+
+	                // Get desired elements
+	                var element = document.querySelectorAll(".tab");
+
+	                // Iterate through the retrieved elements and add the necessary class names.
+	                for(var i = 0; i < element.length; i++)
+	                {
+	                	element[i].classList.add("hide");
+	                }
+	                document.querySelector("#summer").classList.remove("hide");
+	            }
+
+	            function Winter(){
+
+	                // Get desired elements
+	                var element = document.querySelectorAll(".tab");
+
+	                // Iterate through the retrieved elements and add the necessary class names.
+	                for(var i = 0; i < element.length; i++)
+	                {
+	                	element[i].classList.add("hide");
+	                }
+	                document.querySelector("#winter").classList.remove("hide");
+	            }
+
+	            function Spring(){
+
+	                // Get desired elements
+	                var element = document.querySelectorAll(".tab");
+
+	                // Iterate through the retrieved elements and add the necessary class names.
+	                for(var i = 0; i < element.length; i++)
+	                {
+	                	element[i].classList.add("hide");
+	                }
+	                document.querySelector("#spring").classList.remove("hide");
+	            }
+
+
+	            function Autumn(){
+
+	                // Get desired elements
+	                var element = document.querySelectorAll(".tab");
+
+	                // Iterate through the retrieved elements and add the necessary class names.
+	                for(var i = 0; i < element.length; i++)
+	                {
+	                	element[i].classList.add("hide");
+	                }
+	                document.querySelector("#autumn").classList.remove("hide");
+	            }
+
+
+	            function Seasons(){
+
+	                // Get desired elements
+	                var element = document.querySelectorAll(".tab");
+
+	                // Iterate through the retrieved elements and add the necessary class names.
+	                for(var i = 0; i < element.length; i++)
+	                {
+	                	element[i].classList.add("hide");
+	                }
+	                document.querySelector("#summer").classList.remove("hide");
+	                document.querySelector("#spring").classList.remove("hide");
+	                document.querySelector("#autumn").classList.remove("hide");
+	                document.querySelector("#winter").classList.remove("hide");
+
+	            }
+
+	        </script>
+
+	      <footer id="foot"> 
+          <table id="foot_tbl">
+            <tr>
+              <td class="tbl_col">
+                <ul class="foot_ul">
+                  <li><h1 style="color: #ffb20c;">About Us</h1></li>
+                  <p>It all began in the year 1987, when two visionaries met, in a very humble way. Shri Jitendra N. Shah, from the traditional Gujrati Trading Community,<span><a style="color: #ffb20c; margin-left: -40px;" href="AboutUs.html">Read More</a></span></p>
+                </ul>
+              </td>
+              <td class="tbl_col" style="text-align: center;">
+                <br>
+                <form action="#">
+                  <h4 style="font-size: 120%; font-family: Raleway;">GUEST SPEAKS:</h4>
+                  <p><i>"Travelling to Darjeeling through Travospirit was a great pleasure. <br>Came back with cherishable memories. A Big Thank you for <br>all your guidance."</i></p>
+                  <i style="font-size: 130%; color: #c1bcb2;">Please help us serve you better:</i>
+                  <br>
+
+                  <br>
+                  <button type="button" style="background-color: #ffb20c; border: none; height: 30px; width: 100px;" onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSdhJdC3QSnQXcGqNVUphUSBgOCqUddKaMcoryJEI6m7BkW8nw/viewform'" ><b>Feedback</b></button>
+                </form>
+                <br>
+              </td>
+
+              <td class="tbl_col">
+                <h1 style="color: #ffb20c;">Contact Us</h1>
+                <p>No 303-305, 3rd Floor, M L Space,
+                  D J Road,<br>Station Road,
+                Vile Parle West, Mumbai – 400056.</p>
+                <br>
+                <ul class="foot_ul" style="margin-right: 150px;">
+                  <li><i class="fab fa-facebook-f"></i>  <a style="color: #ffffff" href='#'>Facebook</a></li>
+                  <br>
+                  <li><i class="fab fa-instagram"></i>  <a style="color: #ffffff;"  href='#'>Instagram</a></li>
+                  <br>
+                  <li><i class="fab fa-twitter"></i>  <a style="color: #ffffff;" href='#'>Twitter</a></li>
+                </ul>
+              </td>
+            </tr>
+          </table>
+        </footer>
+
+	        <script src="http://code.jquery.com/jquery-2.1.4.js"></script>
+	        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	    </body>
+	    </html>

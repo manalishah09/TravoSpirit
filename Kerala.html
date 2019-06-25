@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TravoSpirit | Kerela</title>
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="shortcut icon" type="image/png" href="logo.png"">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <style>
+
+    .nav1{
+     font-family: 'Montserrat', sans-serif;
+     font-size: 16px;
+     font-weight: 400;
+     color:#ffffff;
+     text-decoration: none !important;
+     padding-left: 40px;
+
+ }
+ .navbar1{
+        box-shadow:  0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.25);
+
+ }
+ a:hover{
+  color:#fe435b;
+}
+a:active{
+  color:#fe435b;
+  border-bottom: 5px;
+  border-color: #fe435b;
+}
+
+.hide{
+    display: none;
+}
+
+#page_info{
+    padding: 20px;
+    background: #AAFC1B /*#AAFC1B*/ ;
+    margin-bottom: 40px;
+    box-shadow:  0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.30);
+}
+
+#sidenav{
+    font-size: 20px;
+}
+
+
+.button1 {
+    background-color: #0244AA; 
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    width: 200px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    border-radius: 10px;
+}
+
+.button2:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.row{
+    content: "";
+    display: table;
+    clear: both;
+    padding: 15px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color:#cfcfd1 ;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    color:#000000;
+}
+
+
+.Search,.tours{
+    font-family: 'Montserrat', sans-serif;
+}
+.dropdown-content a {
+    color: #ffffff;
+    padding: 12px 16px 10px;
+    text-decoration: none;
+    display: block;
+    font-family:'Montserrat', sans-serif; 
+}
+.dropdown:hover .dropdown-content {display: block;}
+
+.foot_ul{
+    list-style: none;
+    text-decoration: none;   
+    list-style-type: none;
+}
+.foot_ul a{
+    text-decoration: none;
+    color:black;
+}
+#foot_tbl   {
+    table-layout: fixed;
+    width:100%;
+}
+.tbl_col{
+    width: 25%;
+}
+#foot{
+    background-color: #131a2f;
+    color: #ffffff;
+
+
+}
+
+
+#foot_pre{
+    background: transparent;
+    border: none;
+    font-size: 15px;
+}
+.link{
+    color: #ffffff;
+}
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.fakeimg{
+    width:94%;
+    height: 200px;
+    border-radius: 6px;
+    box-shadow:  0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.hr{
+    width: 239px;
+    margin-left: 0;
+    border-color: black;
+}
+
+.tab{
+    background-color: white;
+    color: #131a2f;
+    padding: 25px;
+    box-shadow:  0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+</style>
+</head>
+<body style="margin: 0;background: linear-gradient(to right, #ccffff 0%, #ccffcd 100%);">
+    <div id="top" style="margin: 0;">
+       <div class="navbar1" style=" position:relative; margin-top:40px; padding-left: 40px; padding-right: 60px;margin-right:40px; margin-left:40px; background-color: #131a2f; height:120px; z-index: 999;">
+
+          <div style="float:left;padding-top: 20px;">
+            <div style="float:left"><img src="logo.png"></div>
+            <div style="float:right;font-family: 'Montserrat', sans-serif; color:#ffffff;"><h2>TRAVOSPIRIT</h2></a>
+              <p style="margin-top: -15px; font-weight: 10px; color: #c9cfd8; padding-left: 10px;">Travel Agency</p></div>
+
+            </div>
+            <div style="padding-top: 50px;">
+              <div style="float:left;padding-left: 150px;">
+                <a  class="nav1" href="index_n.html">Home</a>
+                <a  class="nav1" href="AboutUs.html">About Us</a>
+                <a  class="nav1" href="Blog.html">Blogs</a>
+                <a  class="nav1" href="holidays.html">Holidays</a>
+                <a  class="nav1"  href="contact_us.html">Contact Us</a>
+                <a  class="nav1"  href="Emergency.html">Emergency Contacts</a>
+                 
+                
+              </div>
+            </div>
+          </div>
+        </div>
+                <br>
+                <br>
+<div class="container">
+                    <div id="page_info" class="col-md-12">                            
+                            <div id="sidenav" class="col-md-3" style="padding: 10px;">
+                                <img class="fakeimg" src="https://s3.ap-south-1.amazonaws.com/heenawebdata/front/tourmaster/k21527593949.jpg">
+                                <h2>BEST OF KERALA</h2>
+                                <hr class="hr">
+                                <b>10 Nights in Hotel</b>
+                                <br>
+                                <br>
+                                <ul type="circle">
+                                    <li>Cochin</li>
+                                    <li>Munnar</li>
+                                    <li>Thekkady</li>
+                                    <li>Kumarakom</li>
+                                    <li>Kanyakumari</li>
+                                    <li>Poovar</li>
+                                </ul>
+                                <hr class="hr">
+                                <h5>INR 90500.00 (Per Couple)</h5>  
+                                <p> Deparures Oct,Nov,Dec,Jan,Feb,March </p>
+                                <hr class="hr">
+                                <a onclick="Info()" style="color:black; text-decoration: none; cursor: pointer;"><button class="button1 button2">Itinerary</button></a><br><br>
+                                <a onclick="Hotel()" style="color:black; text-decoration: none; cursor: pointer;"><button class="button1 button2">Hotel Information</button></a><br><br>
+                                <a onclick="Cancel()" style="color:black; text-decoration: none; cursor: pointer;"><button class="button1 button2">Cancellation</button></a><br><br>
+                            </div>
+                            <div id="info" class="tab col-md-9">
+<h2>Day 1</h2>
+<h3>Arrive Cochin</h3>
+
+<p>Arrive Cochin Station / Airport and reach our hotel directly (Hotel Check/in:- 12:00 noon)& rest the of the day is free for rest / shopping. Night halt at Cochin.
+</p>
+ 
+<h2>Day 2</h2>
+<h3>
+Cochin - Munnar</h3>
+
+<p>After breakfast visit Dutch Palace, St. Francis Church and Chinese Fishing Nets. After lunch proceed to Munnar (5-6 hrs. journeys), en route visit the famous waterfalls and continue towards Munnar. Night halt at Munnar.
+</p>
+ 
+<h2>Day 3</h2>
+<h3>Munnar</h3>
+
+<p>
+   After breakfast visit Metupatty Dam for Speed boating& Coconut Water (at our cost) and Rose Garden. After lunch visit Hydel Park. Night halt at Munnar.
+</p>
+ 
+<h2>Day 4</h2>
+<h3>Munnar</h3>
+
+<p>
+After breakfast visit Rajmala view point the highest point of Kerala. After lunch the day is free to explore the natural beauty of Munnar. Night halt at Munnar.
+
+<b>Note: Munnar - Eravikulam National Park Closed for 2 Months in a year due to the calving season, in this period we Visit to Tea Museum.</b>
+</p>
+ 
+<h2>Day 5</h2>
+<h3>Munnar - Thekkady</h3>
+
+<p>
+   After breakfast proceed to Thekkady (5 hrs. journey), en route visit the Tea Gardens of Munnar. Arrive Thekkady and check-in at hotel. In the evening take a guided Spice Plantation tourand Kerala Traditional Kathakali show (at our Cost).Night halt at Thekkady.
+</p>
+ 
+<h2>Day 6</h2>
+<h3>Thekkady - Kumarakom</h3>
+
+<p>
+After breakfast free time for boating at Periyar Lake OR Jeep Safari (at your own cost) / shopping etc. After lunch proceed to Kumarakom (6 hrs. journey). Night halt at Kumarakom.
+</p>
+ 
+<h2>Day 7</h2>
+<h3>Kumarakom</h3>
+
+<p>
+    Morning free to enjoy resort facilities. After lunch enjoy Kerala famous back waters ride for 3 hrs (at our Cost).. Night halt at Kumarakom.
+</p>
+ 
+<h2>Day 8</h2>
+<h3>Kumarakom - Kanyakumari</h3>
+
+<p>
+    After breakfast proceed to Kanyakumari (10 hrs. journey), evening visit to Gandhi Mandap, Triveni Sangam Ghat and Sunset Point. Night halt at Kanyakumari.
+</p>
+
+
+<h2>Day 9</h2>
+<h3>Kanyakumari - Poovar Island</h3>
+
+<p>
+   Morning view the Sunrise from the hotel Terrace, after breakfast visit to Vivekananda Rock Memorial(Special Pass by Heena).After lunch proceed to Poovar (3 hrs. journey). Evening is free at leisure. Night halt at Poovar Island.
+</p>
+
+
+<h2>Day 10</h2>
+<h3>Poovar Island - Trivandrum - Poovar Island</h3>
+
+<p>
+    After breakfast visit to PadmanabhSwamy Temple & Kovlam famous Beach, after lunch enjoy at beach. Night halt at Poovar Island.
+</p>
+
+
+<h2>Day 11</h2>
+<h3>Train Journey</h3>
+
+<p>
+    After breakfast transfer to Trivandrum railway station / Airport by Heena to board your train/Flight for Mumbai with memorable experience of the tour conducted by Heena Tours & Travels. Rest Passengers departing by Air/Rail has to transfer to at their own expense.
+</p>
+
+<br>
+<b>This tour starts with Lunch on Day 1 and ends with Breakfast on Day 11.</b>
+                            </div>
+                            <div id="hotel" class="tab col-md-9 hide">
+                                <h2>Hotel Information</h2>
+                                <br>
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Location</th>
+                                            <th>Nights</th>
+                                            <th>Hotel Name</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Cochin</td>
+                                            <td>(1)</td>
+                                            <td>Atithi Comfort Inn / Similar</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Munnar</td>
+                                            <td>(3)</td>
+                                            <td>Jungle Inn (Simple Hotel)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Thekkady</td>
+                                            <td>(1)</td>
+                                            <td>Best Western / Similar</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Kumarakom</td>
+                                            <td>(2)</td>
+                                            <td>Abad Whispering Palm(Bamboo Cottage/ Lake facing) (A.C., Swimming Pool)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Kanyakumari</td>
+                                            <td>(1)</td>
+                                            <td>Shingaar International (Simple Hotel)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Poovar</td>
+                                            <td>(2)</td>
+                                            <td>Estuary Island (Lake Facing)(A.C., Swimming Pool)</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <br>
+                            </div>
+                            <div id="cancel" class="tab col-md-9 hide">
+                                <h2>Easy Cancellation</h2>
+                                <h4>But we actually don't want you to see this - We believe you deserve holidays..</h4>
+                                <br>
+                                <ul style="list-style: none;">
+                                    <li>Before 30 Days, of Tour Departure  - Rs. 5000/= per person</li>
+                                    <li>Between 15 to 30 Days – 25% of the Tour Cost</li>
+                                    <li>Between 10 to 15 Day – 50% of the Tour Cost</li>
+                                    <li>Between 5 to 10 Days – 75% of the Tour Cost</li>
+                                    <li> Within 5 days – 100% of the Tour Cost</li>
+                                </ul>
+                            </div>
+                    </div>
+                </div>
+
+
+                <script type="text/javascript">
+                    var modal = document.getElementById('myModal1');
+
+                    // Get the button that opens the modal
+                    var btn = document.getElementById("id01");
+
+                    // Get the <span> element that closes the modal
+                    var span = document.getElementsByClassName("close")[0];
+
+                    // When the user clicks the button, open the modal 
+                    btn.onclick = function() {
+                        modal.style.display = "block";
+                    }
+
+                    // When the user clicks on <span> (x), close the modal
+                    span.onclick = function() {
+                        modal.style.display = "none";
+                    }
+
+                    // When the user clicks anywhere outside of the modal, close it
+                    window.onclick = function(event) {
+                        if (event.target == modal) {
+                            modal.style.display = "none";
+                        }
+                    }
+
+                    function Info(){
+
+                        // Get desired elements
+                        var element = document.querySelectorAll(".tab");
+
+                        // Iterate through the retrieved elements and add the necessary class names.
+                        for(var i = 0; i < element.length; i++)
+                        {
+                            element[i].classList.add("hide");
+                        }
+                        document.querySelector("#info").classList.remove("hide");
+                    }
+
+                    function Hotel(){
+
+                        // Get desired elements
+                        var element = document.querySelectorAll(".tab");
+
+                        // Iterate through the retrieved elements and add the necessary class names.
+                        for(var i = 0; i < element.length; i++)
+                        {
+                            element[i].classList.add("hide");
+                        }
+                        document.querySelector("#hotel").classList.remove("hide");
+                    }
+
+                    function Cancel(){
+                        
+                        // Get desired elements
+                        var element = document.querySelectorAll(".tab");
+
+                        // Iterate through the retrieved elements and add the necessary class names.
+                        for(var i = 0; i < element.length; i++)
+                        {
+                            element[i].classList.add("hide");
+                        }
+                        document.querySelector("#cancel").classList.remove("hide");
+                    }
+
+
+
+                </script>
+
+
+
+  <footer id="foot"> 
+          <table id="foot_tbl">
+            <tr>
+              <td class="tbl_col">
+                <ul class="foot_ul">
+                  <li><h1 style="color: #ffb20c;">About Us</h1></li>
+                  <p>It all began in the year 1987, when two visionaries met, in a very humble way. Shri Jitendra N. Shah, from the traditional Gujrati Trading Community, <a style="color: #ffb20c" href="AboutUs.html">Read More</a></p>
+                </ul>
+              </td>
+              <td class="tbl_col" style="text-align: center;">
+                <br>
+                <form action="#">
+                  <h4 style="font-size: 120%; font-family: Raleway;">GUEST SPEAKS:</h4>
+                  <p><i>"Travelling to Darjeeling through Travospirit was a great pleasure. <br>Came back with cherishable memories. A Big Thank you for <br>all your guidance."</i></p>
+                  <i style="font-size: 130%; color: #c1bcb2;">Please help us serve you better:</i>
+                  <br>
+
+                  <br>
+                  <button type="button" style="background-color: #ffb20c; border: none; height: 30px; width: 100px;" onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSdhJdC3QSnQXcGqNVUphUSBgOCqUddKaMcoryJEI6m7BkW8nw/viewform'" ><b>Feedback</b></button>
+                </form>
+                <br>
+              </td>
+
+              <td class="tbl_col">
+                <h1 style="color: #ffb20c;">Contact Us</h1>
+                <p>No 303-305, 3rd Floor, M L Space,
+                  D J Road,<br>Station Road,
+                Vile Parle West, Mumbai – 400056.</p>
+                <br>
+                <ul class="foot_ul" style="margin-right: 150px;">
+                  <li><i class="fab fa-facebook-f"></i>  <a style="color: #ffffff" href='#'>Facebook</a></li>
+                  <br>
+                  <li><i class="fab fa-instagram"></i>  <a style="color: #ffffff;"  href='#'>Instagram</a></li>
+                  <br>
+                  <li><i class="fab fa-twitter"></i>  <a style="color: #ffffff;" href='#'>Twitter</a></li>
+                </ul>
+              </td>
+            </tr>
+          </table>
+        </footer>
+</body>
+</html>

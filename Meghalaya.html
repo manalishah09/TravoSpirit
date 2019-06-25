@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TravoSpirit | Meghalaya & Assam</title>
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="shortcut icon" type="image/png" href="logo.png"">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+   <style>
+
+    .nav1{
+     font-family: 'Montserrat', sans-serif;
+     font-size: 16px;
+     font-weight: 400;
+     color:#ffffff;
+     text-decoration: none !important;
+     padding-left: 40px;
+
+ }
+ .navbar1{
+        box-shadow:  0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.25);
+
+ }
+ a:hover{
+  color:#fe435b;
+}
+a:active{
+  color:#fe435b;
+  border-bottom: 5px;
+  border-color: #fe435b;
+}
+
+.hide{
+    display: none;
+}
+
+#page_info{
+    padding: 20px;
+    background: #AAFC1B /*#AAFC1B*/ ;
+    margin-bottom: 40px;
+    box-shadow:  0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.30);
+}
+
+#sidenav{
+    font-size: 20px;
+}
+
+
+.button1 {
+    background-color: #0244AA; 
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    width: 200px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    border-radius: 10px;
+}
+
+.button2:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.row{
+    content: "";
+    display: table;
+    clear: both;
+    padding: 15px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color:#cfcfd1 ;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    color:#000000;
+}
+
+
+.Search,.tours{
+    font-family: 'Montserrat', sans-serif;
+}
+.dropdown-content a {
+    color: #ffffff;
+    padding: 12px 16px 10px;
+    text-decoration: none;
+    display: block;
+    font-family:'Montserrat', sans-serif; 
+}
+.dropdown:hover .dropdown-content {display: block;}
+
+.foot_ul{
+    list-style: none;
+    text-decoration: none;   
+    list-style-type: none;
+}
+.foot_ul a{
+    text-decoration: none;
+    color:black;
+}
+#foot_tbl   {
+    table-layout: fixed;
+    width:100%;
+}
+.tbl_col{
+    width: 25%;
+}
+#foot{
+    background-color: #131a2f;
+    color: #ffffff;
+
+
+}
+
+
+#foot_pre{
+    background: transparent;
+    border: none;
+    font-size: 15px;
+}
+.link{
+    color: #ffffff;
+}
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.fakeimg{
+    width:94%;
+    height: 200px;
+    border-radius: 6px;
+    box-shadow:  0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.hr{
+    width: 239px;
+    margin-left: 0;
+    border-color: black;
+}
+
+.tab{
+    background-color: white;
+    color: #131a2f;
+    padding: 25px;
+    box-shadow:  0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+</style>
+
+</head>
+<body style="margin: 0; background: linear-gradient(to right, #ccffff 0%, #ccffcd 100%);">
+    <div id="top" style="margin: 0;">
+        <div class="navbar1" style=" position:relative; margin-top:40px; padding-left: 40px; padding-right: 60px;margin-right:40px; margin-left:40px; background-color: #131a2f; height:120px; z-index: 999;">
+
+          <div style="float:left;padding-top: 20px;">
+            <div style="float:left"><img src="logo.png"></div>
+            <div style="float:right;font-family: 'Montserrat', sans-serif; color:#ffffff;"><h2>TRAVOSPIRIT</h2></a>
+              <p style="margin-top: -15px; font-weight: 10px; color: #c9cfd8; padding-left: 10px;">Travel Agency</p></div>
+
+            </div>
+            <div style="padding-top: 50px;">
+              <div style="float:left;padding-left: 150px;">
+                <a  class="nav1" href="index_n.html">Home</a>
+                <a  class="nav1" href="AboutUs.html">About Us</a>
+                <a  class="nav1" href="Blog.html">Blogs</a>
+                <a  class="nav1" href="holidays.html">Holidays</a>
+                <a  class="nav1"  href="contact_us.html">Contact Us</a>
+                <a  class="nav1"  href="Emergency.html">Emergency Contacts</a>
+                 
+                
+              </div>
+            </div>
+          </div>
+        </div>
+                <br>
+                <br>
+<div class="container">
+                    <div id="page_info" class="col-md-12">                            
+                            <div id="sidenav" class="col-md-3" style="padding: 10px;">
+                                <img class="fakeimg" src="https://s3.ap-south-1.amazonaws.com/heenawebdata/front/tourmaster/Tawang--Bomdila514736961661528554388.jpg">
+                                <h2>MEGHALAYA & ASSAM TOUR</h2>
+                                <hr class="hr">
+                                <b>7 Days & 6 Nights</b>
+                                <br>
+                                <br>
+                                <ul type="circle">
+                                    <li>Shilong</li>
+                                    <li>Kaziranga</li>
+                                    <li>Guwahati</li>
+                                </ul>
+                                <hr class="hr">
+                                <h5>INR 84500.00 (Per Couple)</h5>  
+                                <p> Deparures Oct,Nov,Dec </p>
+                                <hr class="hr">
+                                <a onclick="Info()" style="color:black; text-decoration: none; cursor: pointer;"><button class="button1 button2">Itinerary</button></a><br><br>
+                                <a onclick="Hotel()" style="color:black; text-decoration: none; cursor: pointer;"><button class="button1 button2">Hotel Information</button></a><br><br>
+                                <a onclick="Cancel()" style="color:black; text-decoration: none; cursor: pointer;"><button class="button1 button2">Cancellation</button></a><br><br>
+                            </div>
+                            <div id="info" class="tab col-md-9">
+<h2>Day 1</h2>
+<h3>Guwahati –Shillong(140 kms / 4 hrs)</h3>
+
+<p>
+    Arrive Guwahati airport till 14.00 hrs and drive to Shillong (140 kms / 4 hrs drive approx). Overnight in Shillong.
+</p>
+ 
+<h2>Day 2</h2>
+<h3>
+Shillong – Dawki - Mawlynong - Shillong (116 kms/3 hrs one way)</h3>
+
+<p>
+    After breakfast drive to Cherrapunjee, the wettest place on the earth, for an awesome day trip. En route visit the famous Elephant Falls. In Cherrapunjee be witness to the gorgeous Seven Sisters Falls and Nohkalikai Falls. Later take a soft cave walk inside the Mawsmai Cave. The limestone cave is a natural wonder with innumerable formations inside it. After lunch at Cherrapunjee, visit Eco park. Drive back to Shillong for overnight stay.
+</p>
+ 
+<h2>Day 3</h2>
+<h3>Mysore</h3>
+
+<p>
+   After breakfast drive to Mawlynnong Village known as the cleanest village in Asia and the God’s own Garden. On arrival, visit the Living Root Bridge, a natural bridge formed with the roots of the trees. A little hiking is required to see the magnificent bridge (hiking approx 1 hour). Then visit the balancing rock, a small stone holding a big rock by balancing it on above it and the Tree House (watch tower) made by the local people of the village. Drive Further 30 Kms from Mwallynong to reach Dawki. Dawki, name is famous because of international trade border town to Bangladesh. The Drive to Dawki is a beautiful drive along with Bangladesh border, covered with betel nut trees and a thrilling experience to drive around lots of waterfalls. You can see people from Bangladesh working and fishing in this river being in Indian Border. Before reaching the bordering town you will came across with this blue-water river which is known as Umngot river. Dawki village is known or limestone business and other international trade with Bangladesh and weekly market allows people from both sides to tread their stuffs. Return back to Shillong. Overnight at Shillong.
+
+ 
+</p>
+ 
+<h2>Day 4</h2>
+<h3>Shillong– Kaziranga (250 kms / 5-6 hrs)</h3>
+
+<p>
+After Breakfast proceed to Kaziranga National Park – The land of one horned rhino. En route witness the Umiam Lake (Barapani) - is the biggest artificial lake in Meghalaya in midst of sylvan hills adorned by Khasi pines & peerless beauty. Boat Ride in Lake (at your own cost), boat ride is subject to rules by the Authority .On arrival at Kaziranga, check into hotel and stay overnight at Kaziranga.
+</p>
+ 
+<h2>Day 5</h2>
+<h3>Kaziranga</h3>
+
+<p>
+   Early morning proceed for the exclusive jeep safari & elephant safari at any of the range (Eastern/Central- Subject to Availability & Timing). Explore the wildlife of Kazirangaspecially the pride of Assam, One horned Rhinoceros, Wild Buffalo, Hog Deer, Swamp deer, red headed bill and various flora and faunas. Return back to hotel by lunch. Evening free for leisure. Overnight at Kaziranga.
+</p>
+ 
+<h2>Day 6</h2>
+<h3>Kaziranga–Guwahati (200 kms / 7 hrs)</h3>
+
+<p>
+   After Breakfast proceed to Guwahati. On arrival visit Kamakhya Temple and enjoy the boat ride in Brahmaputra river for visiting Umananda Temple situated in a small river island in Brahmaputra. Check in at hotel and relax. Rest of the time is free at leisure. Overnight at Guwahati.
+</p>
+ 
+<h2>Day 7</h2>
+<h3>Guwahati</h3>
+
+<p>
+    After breakfast transfer to Guwahati airport/railway station to depart by for your home destination. Tour ends with sweet memories conducted by Heena Tours & Travels.
+</p>
+ 
+
+<br>
+<b>This Tour starts with Lunch on Day 1 & ends with breakfast on Day 7.</b>
+                            </div>
+                            <div id="hotel" class="tab col-md-9 hide">
+                                <h2>Hotel Information</h2>
+                                <br>
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Location</th>
+                                            <th>Nights</th>
+                                            <th>Hotel Name</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Shilong</td>
+                                            <td>(3)</td>
+                                            <td>Landmark Hills / Ponishuk / Similar</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Kaziranga</td>
+                                            <td>(2)</td>
+                                            <td>Landmark Woods / United 21 / Similar</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Guwahati</td>
+                                            <td>(1)</td>
+                                            <td>Astar Premier / My flower / D’ Courtyard / Similar</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <br>
+                            </div>
+                            <div id="cancel" class="tab col-md-9 hide">
+                                <h2>Easy Cancellation</h2>
+                                <h4>But we actually don't want you to see this - We believe you deserve holidays..</h4>
+                                <br>
+                                <ul style="list-style: none;">
+                                    <li>Before 30 Days, of Tour Departure  - Rs. 5000/= per person</li>
+                                    <li>Between 15 to 30 Days – 25% of the Tour Cost</li>
+                                    <li>Between 10 to 15 Day – 50% of the Tour Cost</li>
+                                    <li>Between 5 to 10 Days – 75% of the Tour Cost</li>
+                                    <li> Within 5 days – 100% of the Tour Cost</li>
+                                </ul>
+                            </div>
+                    </div>
+                </div>
+
+
+                <script type="text/javascript">
+                    var modal = document.getElementById('myModal1');
+
+                    // Get the button that opens the modal
+                    var btn = document.getElementById("id01");
+
+                    // Get the <span> element that closes the modal
+                    var span = document.getElementsByClassName("close")[0];
+
+                    // When the user clicks the button, open the modal 
+                    btn.onclick = function() {
+                        modal.style.display = "block";
+                    }
+
+                    // When the user clicks on <span> (x), close the modal
+                    span.onclick = function() {
+                        modal.style.display = "none";
+                    }
+
+                    // When the user clicks anywhere outside of the modal, close it
+                    window.onclick = function(event) {
+                        if (event.target == modal) {
+                            modal.style.display = "none";
+                        }
+                    }
+
+                    function Info(){
+
+                        // Get desired elements
+                        var element = document.querySelectorAll(".tab");
+
+                        // Iterate through the retrieved elements and add the necessary class names.
+                        for(var i = 0; i < element.length; i++)
+                        {
+                            element[i].classList.add("hide");
+                        }
+                        document.querySelector("#info").classList.remove("hide");
+                    }
+
+                    function Hotel(){
+
+                        // Get desired elements
+                        var element = document.querySelectorAll(".tab");
+
+                        // Iterate through the retrieved elements and add the necessary class names.
+                        for(var i = 0; i < element.length; i++)
+                        {
+                            element[i].classList.add("hide");
+                        }
+                        document.querySelector("#hotel").classList.remove("hide");
+                    }
+
+                    function Cancel(){
+                        
+                        // Get desired elements
+                        var element = document.querySelectorAll(".tab");
+
+                        // Iterate through the retrieved elements and add the necessary class names.
+                        for(var i = 0; i < element.length; i++)
+                        {
+                            element[i].classList.add("hide");
+                        }
+                        document.querySelector("#cancel").classList.remove("hide");
+                    }
+
+
+
+                </script>
+
+
+
+  <footer id="foot"> 
+          <table id="foot_tbl">
+            <tr>
+              <td class="tbl_col">
+                <ul class="foot_ul">
+                  <li><h1 style="color: #ffb20c;">About Us</h1></li>
+                  <p>It all began in the year 1987, when two visionaries met, in a very humble way. Shri Jitendra N. Shah, from the traditional Gujrati Trading Community, <a style="color: #ffb20c" href="AboutUs.html">Read More</a></p>
+                </ul>
+              </td>
+              <td class="tbl_col" style="text-align: center;">
+                <br>
+                <form action="#">
+                  <h4 style="font-size: 120%; font-family: Raleway;">GUEST SPEAKS:</h4>
+                  <p><i>"Travelling to Darjeeling through Travospirit was a great pleasure. <br>Came back with cherishable memories. A Big Thank you for <br>all your guidance."</i></p>
+                  <i style="font-size: 130%; color: #c1bcb2;">Please help us serve you better:</i>
+                  <br>
+
+                  <br>
+                  <button type="button" style="background-color: #ffb20c; border: none; height: 30px; width: 100px;" onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSdhJdC3QSnQXcGqNVUphUSBgOCqUddKaMcoryJEI6m7BkW8nw/viewform'" ><b>Feedback</b></button>
+                </form>
+                <br>
+              </td>
+
+              <td class="tbl_col">
+                <h1 style="color: #ffb20c;">Contact Us</h1>
+                <p>No 303-305, 3rd Floor, M L Space,
+                  D J Road,<br>Station Road,
+                Vile Parle West, Mumbai – 400056.</p>
+                <br>
+                <ul class="foot_ul" style="margin-right: 150px;">
+                  <li><i class="fab fa-facebook-f"></i>  <a style="color: #ffffff" href='#'>Facebook</a></li>
+                  <br>
+                  <li><i class="fab fa-instagram"></i>  <a style="color: #ffffff;"  href='#'>Instagram</a></li>
+                  <br>
+                  <li><i class="fab fa-twitter"></i>  <a style="color: #ffffff;" href='#'>Twitter</a></li>
+                </ul>
+              </td>
+            </tr>
+          </table>
+        </footer>
+</body>
+</html>

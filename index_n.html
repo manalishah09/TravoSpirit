@@ -1,0 +1,685 @@
+<html>
+<head>
+  <title>TravoSpirit</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+  <link rel="shortcut icon" type="image/png" href="logo.png">
+  <link href="https://fonts.googleapis.com/css?family=Lobster|Mali:400,700|Montserrat" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+
+  body{
+    margin: 0px; 
+    background: #9CECFB;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #ffffff, #efffff, #ffffff);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #ffffff, #efffff, #ffffff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+  .nav1{
+   font-family: 'Montserrat', sans-serif;
+   font-size: 16px;
+   font-weight: 400;
+   color:#ffffff;
+   text-decoration: none !important;
+   padding-left: 40px;
+ }
+ a:hover{
+  color:#fe435b;
+}
+a:active{
+  color:#fe435b;
+  border-bottom: 5px;
+  border-color: #fe435b;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color:#cfcfd1 ;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  color:#000000;
+}
+.Search{
+  font-family: 'Mali', sans-serif;
+}
+
+.Search input, .Search select, .Search button{
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.tours{
+  font-family: 'Mali',cursive;
+  background: #9CECFB;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #9CECFB, #0052D4, #65C7F7);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #9CECFB, #0052D4, #65C7F7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  padding-top: 10px; 
+  padding-bottom: 50px;
+  color: white;
+}
+
+
+#image:hover {
+    -ms-transform: scale(1.05); /* IE 9 */
+    -webkit-transform: scale(1.05); /* Safari 3-8 */
+    transform: scale(1.05); 
+     transition: transform .3s;
+}
+
+.dropdown-content a {
+  color: #ffffff;
+  padding: 12px 16px 10px;
+  text-decoration: none;
+  display: block;
+  font-family:'Montserrat', sans-serif; 
+}
+.dropdown:hover .dropdown-content {display: block;}
+
+.foot_ul{
+  list-style: none;
+  text-decoration: none;   
+  list-style-type: none;
+}
+.foot_ul a{
+  text-decoration: none;
+  color:black;
+}
+#foot_tbl   {
+  table-layout: fixed;
+  width:100%;
+}
+.tbl_col{
+  width: 25%;
+  color: #ffffff;
+
+}
+#foot{
+  background-color: #131a2f;
+  color: #ffffff;
+
+
+}
+
+
+#foot_pre{
+  background: transparent;
+  border: none;
+  font-size: 15px;
+}
+.link{
+  color: #ffffff;
+}
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 40%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.container1{
+  position: relative;
+  color: white;
+
+}
+.bottom-left {
+  position: absolute;
+  bottom: 210px;
+  left: 0px;
+  opacity: 0.6;
+  font-size: 90%;
+  font-weight: 200;
+  background-color: #000000;
+}
+.botton-left:hover{
+  opacity: 0.5
+}
+.why{
+
+ padding-top: 30px;
+ background-image: url(https://images.unsplash.com/photo-1438786657495-640937046d18?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=72193fcab9f490f9e0f3b158c535e0ad&auto=format&fit=crop&w=1050&q=80);
+ background-size: cover;
+ background-position: center;
+ background-attachment: fixed;
+}
+
+.imgicon{
+  height: 80px;
+  width: 80px;
+  margin-bottom: 20px;
+}
+
+/*#top {
+        background-image: url(file:///F:/Nemil/College%20Project/destino/images/home.jpg);
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat; 
+        padding-top: 20px;
+        height: 640px;
+        width: 100%;
+        }*/
+
+
+        .numbers{
+          margin-top: 30px;
+          background: white;
+          margin-left: 10px;
+          width:24.1%;
+          border-radius: 45px;
+          opacity: 0.8; 
+        }
+
+
+        .featured_img{
+          box-shadow:  0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.40);
+          border-radius: 5px;
+        }
+
+        /* Button used to open the chat form - fixed at the bottom of the page */
+        .open-button {
+          background-color: #ffb20c;
+          color: white;
+          padding: 16px 20px;
+          border: none;
+          cursor: pointer;
+          opacity: 0.8;
+          position: fixed;
+          bottom: 23px;
+          right: 28px;
+          width: 280px;
+        }
+
+        /* The popup chat - hidden by default */
+        .chat-popup {
+          display: none;
+          position: fixed;
+          bottom: 0;
+          right: 15px;
+          border: 3px solid #f1f1f1;
+          z-index: 1000;
+        }
+
+        /* Add styles to the form container */
+        .form-container {
+          max-width: 300px;
+          padding: 10px;
+          background-color: white;
+        }
+
+        .form-container input{
+          width: 100%;
+          padding: 15px;
+          margin: 5px 0 22px 0;
+          border: none;
+          background: #f1f1f1;
+          resize: none;
+        }
+
+        /* Full-width textarea */
+        .form-container textarea {
+          width: 100%;
+          padding: 15px;
+          margin: 5px 0 22px 0;
+          border: none;
+          background: #f1f1f1;
+          resize: none;
+          min-height: 200px;
+        }
+
+        /* When the textarea gets focus, do something */
+        .form-container textarea:focus {
+          background-color: #ddd;
+          outline: none;
+        }
+
+        /* Set a style for the submit/login button */
+        .form-container .btn {
+          background-color: #4CAF50;
+          color: white;
+          padding: 16px 20px;
+          border: none;
+          cursor: pointer;
+          width: 100%;
+          margin-bottom:10px;
+          opacity: 0.8;
+        }
+
+        /* Add a red background color to the cancel button */
+        .form-container .cancel {
+          background-color: red;
+        }
+
+        /* Add some hover effects to buttons */
+        .form-container .btn:hover, .open-button:hover {
+          opacity: 1;
+        }
+
+
+
+
+        .home
+        {
+          z-index: 0;
+          width: 100%;
+          height: 80vh;
+        }
+        .home_background
+        {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center center;
+        }
+        .home_content
+        {
+          position: absolute;
+          top: 46%;
+          left: 45%;
+          -webkit-transform: translateX(-50%);
+          -moz-transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+          -o-transform: translateX(-50%);
+          transform: translateX(-50%);
+          width: 80%;
+          text-align: center;
+        }
+        .home_text_large
+        {
+          font-size: 215px;
+          font-weight: 900;
+          color: #fdaa27;
+          opacity: 0.34;
+          text-transform: uppercase;
+          line-height: 0.75;
+        }
+        .home_text_small
+        {
+          position: absolute;
+          top: 50%;
+          left: 55%;
+          -webkit-transform: translate(-50%, -50%);
+          -moz-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          -o-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+          width: 100%;
+          font-size: 70px;
+          font-weight: 300;
+          color: #FFFFFF;
+          text-shadow: 0px 11px 51px rgba(0,0,0,0.35);
+        }
+
+
+      </style>
+    </head>
+    <body>
+      <div id="top" style="margin: 0;">
+        <div class="navbar1" style=" position:relative; margin-top:40px; padding-left: 40px; padding-right: 60px;margin-right:40px; margin-left:40px; background-color: #131a2f; height:120px; z-index: 999;">
+
+          <div style="float:left;padding-top: 20px;">
+            <div style="float:left"><img src="logo.png"></div>
+            <div style="float:right;font-family: 'Montserrat', sans-serif; color:#ffffff;"><h2>TRAVOSPIRIT</h2></a>
+              <p style="margin-top: -15px; font-weight: 10px; color: #c9cfd8; padding-left: 10px;">Travel Agency</p></div>
+
+            </div>
+            <div style="padding-top: 50px;">
+              <div style="float:left;padding-left: 150px;">
+                <a  class="nav1" href="index_n.html">Home</a>
+                <a  class="nav1" href="AboutUs.html">About Us</a>
+                <a  class="nav1" href="Blog.html">Blogs</a>
+                <a  class="nav1" href="holidays.html">Holidays</a>
+                <a  class="nav1"  href="contact_us.html">Contact Us</a>
+                <a  class="nav1"  href="Emergency.html">Emergency Contacts</a>
+                 
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        
+           
+
+            <div class="home">
+              <div class="home_background" style="background-image:url(home.jpg); background-position: center; background-attachment: fixed; "></div>
+              <div class="home_content">
+                <div class="home_content_inner">
+                  <div class="home_text_large">discover</div>
+                  <div class="home_text_small">Discover new worlds</div>  
+                </div>
+              </div>
+            </div>
+
+
+            <div class="Search">
+              <center><h1 style="font-size: 50px; font-weight: 650;   font-family: 'Lobster', cursive;">Find Your Travel Story</h1></center><br><br>
+              <center>
+                <table>
+                  <tr>
+                    <td style="color: #7f8082;">Your Destination</td>
+                    <td style="padding-left: 60px; color: #7f8082;">Month</td>
+                    <td style="padding-left: 60px; color: #7f8082;">Adults</td>
+                    <td style="padding-left: 60px; color: #7f8082;">Kids</td>
+                  </tr>
+                  <tr>
+                    <td><input type="text" name="name" placeholder="Enter Destination" style="width: 250px; color: color: #7f8082;"></td>
+                    <td style="padding-left: 60px;">
+                      <select style="width: 150px; color: #7f8082;">
+                        <option value="Jan">January</option>
+                        <option value="Feb">February</option>
+                        <option value="March">March</option>
+                        <option value="Apr">April</option>
+                        <option value="May">May</option>
+                        <option value="June">June</option>
+                        <option value="July">July</option>
+                        <option value="Aug">August</option>
+                        <option value="Sept">September</option>
+                        <option value="Oct">October</option>
+                        <option value="Nov">November</option>
+                        <option value="Dec">December</option>
+
+                      </select>
+                    </td>
+                    <td style="padding-left: 60px;">
+                      <select style="width: 100px; color: #7f8082;">
+                        <option value="one">01</option>
+                        <option value="two">02</option>
+                        <option value="three">03</option>
+                        <option value="four">04</option>
+                        <option value="five">05</option>
+                        <option value="six">06</option>
+                        <option value="seven">07</option>
+                        <option value="eight">08</option>
+                        <option value="nine">09</option>
+                        <option value="ten">10</option>
+                      </select>
+                    </td>
+                    <td style="padding-left: 60px;">
+                      <select style=" width: 100px; color: #7f8082;">
+                        <option value="one">01</option>
+                        <option value="two">02</option>
+                        <option value="three">03</option>
+                        <option value="four">04</option>
+                        <option value="five">05</option>
+                        <option value="six">06</option>
+                        <option value="seven">07</option>
+                        <option value="eight">08</option>
+                        <option value="nine">09</option>
+                        <option value="ten">10</option>
+                      </select>
+                    </td>
+                    <td style="padding-left: 20px;">
+                      <button type="submit" style="background-color: #131a2f; color: white; width: 100px; border: none;
+                      ">Search</button>
+                    </td>
+                  </tr>
+                </table>
+              </center>
+            </div>
+
+            <br>
+            <br>
+
+
+
+            <div class="tours">
+              <h2 style="padding: 30px 20px; font-weight: 600; color: ">Featured Tours</h2>
+
+              <center><table cellspacing="0">
+                <tr>
+                  <td style="padding-left: 20px;" id="image" ><a href="Sikkim.html"><img  class="featured_img" src="https://s3.ap-south-1.amazonaws.com/heenawebdata/front/tourmaster/689014604394421528445678.jpg" width="90%"></a></td>
+                  <td id="image"  ><a href="SouthTour.html"><img class="featured_img"  src="https://s3.ap-south-1.amazonaws.com/heenawebdata/front/tourmaster/South11527752058.png" width="90%"></a></td>
+                  <td id="image"  ><a href="Meghalaya.html"><img  class="featured_img" src="https://s3.ap-south-1.amazonaws.com/heenawebdata/front/tourmaster/Tawang--Bomdila514736961661528554388.jpg" width="90%"></a></td>
+                  <td id="image"  ><a href="Kerala.html"><img class="featured_img"  src="https://s3.ap-south-1.amazonaws.com/heenawebdata/front/tourmaster/k21527593949.jpg" width="90%"></a></td>
+                </tr>
+                <tr style="color: white;">
+                  <td style="padding-left: 20px; padding-top: 15px; font-size:18px;  font-weight: 600;">SIKKIM TOUR<br><span style="font-size: 100%;">7 Days/6 Nights</span></td>
+                  <td style=" font-size:18px;padding-top: 15px; font-weight: 600;">SOUTH TOUR<br><span style="font-size: 100%;">9 Days/8 Nights</span></td>
+                  <td style="font-size:18px;padding-top: 15px;  font-weight: 600;">MEGHALAYA & ASSAM<br><span style="font-size: 100%;">7 Days/6 Nights</span></td>
+                  <td style="font-size:18px;padding-top: 15px; font-weight: 600;">BEST OF KERALA<br><span style="font-size: 100%;">11 Days/10 Nights</span></td>
+                </tr>
+              </table>
+            </center>
+          </div>
+
+
+
+          <div class="why back" style="height: 600px;">
+            <center><h1 style="margin-bottom: 60px; color: black;">Why <span><i>TRAVOSPIRIT</i></span>?</h1></center>
+            <div class="col-md-2">
+              <center>
+                <img class="imgicon" src="scene.png">
+                <p style="font-weight: 650; color: rgba(25,0,15,0.90);">Lots and lots of sight seeing, with enough free time to roam.</p>
+              </center>
+            </div>
+            <div class="col-md-2">
+              <center>
+                <img class="imgicon" src="thumbs-up.png">
+                <p style="font-weight: 650; color: rgba(25,0,15,0.90);">25 Years of experience, 1000+ tour managers and 250+ inhouse sales and support staff.</p>
+              </center>
+            </div>
+            <div class="col-md-2">
+              <center>
+                <img class="imgicon" src="map.png">
+                <p style="font-weight: 650; color: rgba(0,0,15,0.90);">Free time to travel your own way and do things that you like.</p>
+              </center>
+            </div>
+            <div class="col-md-2">
+              <center>
+                <img class="imgicon" src="star.png">
+                <p style="font-weight: 650; color: rgba(25,0,15,0.90);">Unbeatable Value for your hard earn money with host of exclusive experiences that Travospirit give.</p>
+              </center>
+            </div>
+            <div class="col-md-2">
+              <center>
+                <img class="imgicon" src="serve.png">
+                <p style="font-weight: 650; color: rgba(25,0,15,0.90);">Extra Ordinary service right from the sales staff to tour managers to help you get the best holiday experience and life long memories.</p>
+              </center>
+            </div>
+            <div class="col-md-2">
+              <center>
+                <img class="imgicon" src="hotel.png">
+                <p style="font-weight: 650; color: rgba(25,0,15,0.90);">Authentic and verified hotel with amazing location and private amenities.</p>
+              </center>
+            </div>
+
+
+  <!--   <script type="text/javascript">
+      
+      var clStatCount = function() {
+        
+        var statSection = $(".s-stats"),
+            stats = $(".item-stats__count");
+
+        statSection.waypoint({
+
+            handler: function(direction) {
+
+                if (direction === "down") {
+
+                    stats.each(function () {
+                        var $this = $(this);
+
+                        $({ Counter: 0 }).animate({ Counter: $this.text() }, {
+                            duration: 4000,
+                            easing: 'swing',
+                            step: function (curValue) {
+                                $this.text(Math.ceil(curValue));
+                            }
+                        });
+                    });
+
+                } 
+
+                // trigger once only
+                this.destroy();
+
+            },
+
+            offset: "90%"
+
+        });
+    };
+
+            clStatCount();
+
+
+          </script> -->
+
+          <div class="s-stats">
+            <center>
+              <div class="col-md-3 numbers">
+                <h1 class="item-stats__count" style="font-size:60px">63+</h1>
+                <hr>
+                <p>GROUP TOUR OPTIONS TO CHOOSE FROM</p>
+              </div>
+              <div class="col-md-3 numbers">
+                <h1 class="item-stats__count" style="font-size:60px">98+</h1>
+                <hr>
+                <p>TRAVELERS ENJOYING TOURS NOW</p>
+              </div>
+              <div class="col-md-3 numbers">
+                <h1 class="item-stats__count" style="font-size:60px">16640+</h1>
+                <hr>
+                <p>HAPPY CUSTOMERS OF EUROPE TOURS</p>
+              </div>
+              <div class="col-md-3 numbers">
+                <h1 class="item-stats__count" style="font-size:60px">12100+</h1>
+                <hr>
+                <p>TOURS ORGANISED EVERY YEAR</p>
+              </div>
+            </center>
+          </div>
+
+        </div>
+
+        <footer id="foot"> 
+          <table id="foot_tbl">
+            <tr>
+              <td class="tbl_col">
+                <ul class="foot_ul">
+                  <li><h1 style="color: #ffb20c;">About Us</h1></li>
+                  <p>It all began in the year 1987, when two visionaries met, in a very humble way. Shri Jitendra N. Shah, from the traditional Gujrati Trading Community, <a style="color: #ffb20c" href="AboutUs.html">Read More</a></p>
+                </ul>
+              </td>
+              <td class="tbl_col" style="text-align: center;">
+                <br>
+                <form action="#">
+                  <h4 style="font-size: 120%; font-family: Raleway;">GUEST SPEAKS:</h4>
+                  <p><i>"Travelling to Darjeeling through Travospirit was a great pleasure. <br>Came back with cherishable memories. A Big Thank you for <br>all your guidance."</i></p>
+                  <i style="font-size: 130%; color: #c1bcb2;">Please help us serve you better:</i>
+                  <br>
+
+                  <br>
+                  <button type="button" style="background-color: #ffb20c; border: none; height: 30px; width: 100px;" onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSdhJdC3QSnQXcGqNVUphUSBgOCqUddKaMcoryJEI6m7BkW8nw/viewform'" ><b>Feedback</b></button>
+                </form>
+                <br>
+              </td>
+
+              <td class="tbl_col">
+                <h1 style="color: #ffb20c;">Contact Us</h1>
+                <p>No 303-305, 3rd Floor, M L Space,
+                  D J Road,<br>Station Road,
+                Vile Parle West, Mumbai – 400056.</p>
+                <br>
+                <ul class="foot_ul" style="margin-right: 150px;">
+                  <li><i class="fab fa-facebook-f"></i>  <a style="color: #ffffff" href='#'>Facebook</a></li>
+                  <br>
+                  <li><i class="fab fa-instagram"></i>  <a style="color: #ffffff;"  href='#'>Instagram</a></li>
+                  <br>
+                  <li><i class="fab fa-twitter"></i>  <a style="color: #ffffff;" href='#'>Twitter</a></li>
+                </ul>
+              </td>
+            </tr>
+          </table>
+        </footer>
+        <button class="open-button" onclick="openForm()">Chat? - Offline</button>
+        <div class="chat-popup" id="myForm">
+          <form action="/action_page.php" class="form-container">
+            <center>
+              <h3>Chat</h3>
+              <p>Please fill out the form below and we will get back to you soon.</p>
+              <input type ="text" placeholder="Name" name="fName" required>
+              <input type="email" placeholder="Email" name="email" required>
+              <textarea placeholder="Type message" name="msg" required></textarea>
+              <button type="submit" class="btn">Send</button>
+              <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+            </center>
+          </form>
+        </div>
+
+<script type="text/javascript">
+var modal = document.getElementById('myModal1');
+
+// Get the button that opens the modal
+var btn = document.getElementById("id01");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</body>
+</html>
