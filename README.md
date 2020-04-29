@@ -1,2 +1,2 @@
 # TravoSpirit
-This project is about a website for a tourism company which is TravoSpirit.
+A web based project made for toursim industry.
